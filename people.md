@@ -1,4 +1,6 @@
 ---
 layout: people
-title: "People"
+title: "EARP Lab Members"
 ---
+
+??
