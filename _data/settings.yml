@@ -1,7 +1,3 @@
-title: "EARP Lab"
-
-description: "Experimental Bioethics, AI, and Relational Moral Psychology Lab"
-
 menu:
 - {name: 'home', url: '/home'}
 - {name: 'people', url: '/people'}
