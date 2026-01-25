@@ -7,18 +7,25 @@ people:
   institution: 'Some University', 
   email: 'hello@university.edu', 
   bio: 'insert bio',
-  image: 'assets/img/primary-investigator.jpg', url: '/1-brian'}
+  image: 'assets/img/primary-investigator.jpg'}
 - {name: 'person 2', 
   institution: 'Some University', 
   email: 'hello@university.edu', 
-  image: 'assets/img/primary-investigator.jpg', url: '/2-primary-investigator'}
+  image: 'assets/img/primary-investigator.jpg'}
 - {name: 'person 3', 
   institution: 'Some University',  
   email: 'hello@university.edu', 
-  image: 'assets/img/lab-technician.jpg', url: '/3-postdocs'}
+  image: 'assets/img/lab-technician.jpg'}
 
-PG: 
-- {name: 'PG & UG Student', 
+postdoc:
+- {name: 'postdoc 1', 
+  institution: 'Some University', 
+  email: 'hello@university.edu', 
+  bio: 'insert bio',
+  image: 'assets/img/primary-investigator.jpg'}
+
+student: 
+- {name: 'student 1', 
   institution: 'Some University', 
   image: 'assets/img/graduate-student.jpg'}
 
