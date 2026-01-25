@@ -3,11 +3,11 @@ menu:
 - {name: 'publications', url: '/publications'}
 
 people:
-- {name: 'Brian Earp', 
+- {name: 'Brian D. Earp', 
   institution: 'Some University', 
   email: 'hello@university.edu', 
   bio: 'insert bio',
-  image: 'assets/img/primary-investigator.jpg'}
+  image: 'assets/headshots/BrianDE.avif'}
 - {name: 'person 2', 
   institution: 'Some University', 
   email: 'hello@university.edu', 
@@ -15,12 +15,12 @@ people:
   image: 'assets/img/primary-investigator.jpg'}
 
 postdoc:
-{name: '', 
+- {name: '', 
   institution: '', 
   email: '', 
   bio: '',
   image: 'assets/img/'}
-{name: 'Elzė Sigutė Mikalonytė', 
+- {name: 'Elzė Sigutė Mikalonytė', 
   institution: 'National University of Singapore', 
   email: 'esmikalonyte@nus.edu.sg', 
   bio: 'Elzė Sigutė Mikalonytė is a Research Fellow at the Centre for Biomedical Ethics. She is an experimental philosopher working in aesthetics, metaphysics, and moral psychology. Previously, she was a Research Associate in the Department of Psychology and a Junior Research Fellow at Wolfson College, University of Cambridge. She received her BA, MA, and PhD in philosophy from Vilnius University, Lithuania. She spent part of her PhD studies at the Institut Jean Nicod in Paris, France. Before turning to philosophy, she studied violin at the Vilnius Conservatoire. She is a steering committee member of the European Network for Philosophy of Music and a board member of the Lithuanian Philosophical Association.',
