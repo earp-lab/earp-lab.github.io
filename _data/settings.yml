@@ -1,4 +1,5 @@
 menu:
+- {name: 'home', url: '/home'}
 - {name: 'people', url: '/people'}
 - {name: 'publications', url: '/publications'}
 
