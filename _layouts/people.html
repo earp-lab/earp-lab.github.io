@@ -4,7 +4,7 @@ layout: default
 
 {{ content }}
 
-<h3 class="fw-bold border-bottom pb-3 mb-5">People</h3>
+<h3 class="fw-bold border-bottom pb-3 mb-5">Primary Investigator</h3>
 {% for person in site.data.settings.people %}
 <div class="row g-5 mb-5">
   <div class="col-md-6">
@@ -15,6 +15,36 @@ layout: default
   </div>
   <div class="col-md-6">
     <img src="{{ site.github.url }}/{{ person.image }}" alt="Contact" width="100%">
+  </div>
+</div>
+{% endfor %}
+
+<h3 class="fw-bold border-bottom pb-3 mb-5">Postdoctoral Researcher</h3>
+{% for person in site.data.settings.postdoc %}
+<div class="row g-5 mb-5">
+  <div class="col-md-6">
+    <h5>{{ postdoc.name }}</h5>
+    <p>{{ postdoc.institution }}</p>
+    <p>Email: {{ postdoc.email }}</p>
+    <p>Bio: {{ postdoc.bio }}</p>
+  </div>
+  <div class="col-md-6">
+    <img src="{{ site.github.url }}/{{ postdoc.image }}" alt="Contact" width="100%">
+  </div>
+</div>
+{% endfor %}
+
+<h3 class="fw-bold border-bottom pb-3 mb-5">PG & UG Student</h3>
+{% for person in site.data.settings.student %}
+<div class="row g-5 mb-5">
+  <div class="col-md-6">
+    <h5>{{ student.name }}</h5>
+    <p>{{ student.institution }}</p>
+    <p>Email: {{ student.email }}</p>
+    <p>Bio: {{ student.bio }}</p>
+  </div>
+  <div class="col-md-6">
+    <img src="{{ site.github.url }}/{{ student.image }}" alt="Contact" width="100%">
   </div>
 </div>
 {% endfor %}
