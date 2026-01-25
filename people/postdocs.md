@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Graduate Student"
+title: "Postdoc Research Fellow"
 ---
 
 Researcher - Physics & Astronomy
