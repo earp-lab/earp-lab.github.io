@@ -5,7 +5,7 @@ layout: default
 <h3 class="fw-bold border-bottom pb-3 mb-5">Primary Investigator</h3>
 {% for person in site.data.settings.people %}
 <div class="row g-5 mb-5">
-  <div class="col-md-6">
+  <div class="col-md-9">
     <h5>
       <a href="{{ person.website }}" target="_blank" rel="noopener"> 
         {{ person.name }}</a>
@@ -16,8 +16,8 @@ layout: default
     </p>
     <p>Bio: {{ person.bio }}</p>
   </div>
-  <div class="col-md-6">
-    <img src="{{ site.github.url }}/{{ person.image }}" alt="headshotNA" style="width:50%; float:right">
+  <div class="col-md-3">
+    <img src="{{ site.github.url }}/{{ person.image }}" alt="headshotNA" width="50%">
   </div>
 </div>
 {% endfor %}
@@ -37,7 +37,7 @@ layout: default
     <p>Bio: {{ postdoc.bio }}</p>
   </div>
   <div class="col-md-6">
-    <img src="{{ site.github.url }}/{{ postdoc.image }}" alt="headshotNA" width="50%" float=right>
+    <img src="{{ site.github.url }}/{{ postdoc.image }}" alt="headshotNA" width="50%">
   </div>
 </div>
 {% endfor %}
