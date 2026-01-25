@@ -3,19 +3,22 @@ menu:
 - {name: 'publications', url: '/publications'}
 
 people:
-- {name: 'Brian D. Earp', url: 'https://www.brianearp.com/',
+- {name: 'Brian D. Earp', 
+  website: 'https://www.brianearp.com/',
   institution: 'National University of Singapore', 
   email: 'bdearp@nus.edu.sg', 
   bio: 'Associate Professor Brian D. Earp, PhD, is director of the Oxford-NUS Centre for Neuroethics and Society (OCNS) and the EARP Lab (Experimental Bioethics, Artificial Intelligence, and Relational Moral Psychology Lab) within the Centre for Biomedical Ethics, Yong Loo Lin School of Medicine, National University of Singapore (NUS). Brian is also an Associate Professor of Philosophy and of Psychology at NUS by courtesy. Brian holds degrees from Yale, Oxford, and Cambridge Universities and is a Research Associate of the Uehiro Oxford Institute at the University of Oxford. Brian is also Associate Director of the Yale-Hastings Program in Ethics and Health Policy at Yale University and The Hastings Center, and is an elected member of the UK Young Academy under the auspices of the British Academy and the Royal Society. See www.brianearp.com for more information.',
   image: 'assets/headshots/BrianDE.avif'}
   
-- {name: 'Ivar R. Hannikainen', url: 'https://moralsciencelab.com/people/',
+- {name: 'Ivar R. Hannikainen', 
+  website: 'https://moralsciencelab.com/people/',
   institution: 'University of Granada', 
   email: 'ivar@ugr.es', 
   bio: 'insert bio',
   image: 'assets/headshots/IvarRH.png'}
 
-- {name: 'Vilius Dranseika', url: 'https://www.dranseika.lt/',
+- {name: 'Vilius Dranseika', 
+  website: 'https://www.dranseika.lt/',
   institution: 'Jagiellonian University', 
   email: 'vilius.dranseika@uj.edu.pl', 
   bio: 'insert bio',
@@ -42,6 +45,7 @@ postdoc:
   image: 'assets/headshots/ElzeSM.avif'}
   
 - {name: 'Yuxin Liu', 
+  website: 'https://liu-yuxin-psych.github.io/',
   institution: 'National University of Singapore', 
   email: 'yuxinliu@nus.edu.sg', 
   bio: 'Yuxin joined the Centre for Biomedical Ethics as a Research Fellow and Lab Manager for A/P Brian Earp’s EARP Lab in 2026. She holds, or will soon hold, a PhD, MScR, and MA in Psychology from the University of Edinburgh. Her doctoral research examines the concept of AI moral enhancement, aiming to ground proposals for Artificial Moral Advisors in empirical evidence of how individuals are likely to respond to them. Her research interests include moral psychology, experimental philosophy/bioethics, machine (meta)ethics, and AI ethics.',
