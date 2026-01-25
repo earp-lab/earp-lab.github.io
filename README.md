@@ -1,22 +1,23 @@
-## EARP Lab Website Maintenance 
+## EARP Lab Website Manual 
 
 
-#### home page
+#### home page/tab
 
-The `_layouts/home.html` layout defines the home/landing page. This page includes 
-1) a lab introduction: the intro texts can be edited in `index.md`; the group picture is stored in the `assets` folder directory
-2) a list of featured publications: only featured publications from `_data/publications,yml` are visible on the home page; pdf files of publications are stored in the `publications` folder directory
-3) a list of update posts: posts are stored in the `_posts` folder directory, each of which is an md. file and uses the `_layouts/post.html` layout
+The `_layouts/home.html` layout defines the landing page (the home tab doesn't actually do anything). This page includes 
+- a lab introduction: the intro texts can be edited in `index.md`; the group picture is stored in the `assets` folder directory
+- a list of featured publications: only featured publications from `_data/publications,yml` are visible on the home page; pdf files of publications are stored in the `publications` folder directory
+- a list of update posts: posts are stored in the `_posts` folder directory, each of which is an md. file and uses the `_layouts/post.html` layout
 
 #### people tab
 
-- The `_layouts/people.html` layout defines the format of how lab members' info is presented through 3 for loops for 3 groups: primary investigators, postdocs, and PG/UG students.
-- The loops extract info of each person from `_data/settings.yml`
+- Individual lab member's info can be added/edited in `_data/settings.yml`, which fall into different groups (PIs, postdocs, students, etc). It displays each member's name, personal website (linked to the name), institution, email (clickable), bio, and headshot
+- The tab's layout can be edited in `_layouts/people.html` which extracts info from `_data/settings.yml`
+- All headshot images are stored in the `assets/headshots` folder directory
 
 #### publication tab
 
-- The `_layouts/publications.html` layout defines the format of how publications are presented through an if-else for loop (the same loop in `_layouts/home.html`), which extracts paper info from `_data/publications.yml`
-- The publication tab displays the full list of publications, whereas the home page only displays featured publications
+- Publications can be added/edited in `_data/publications.yml`, which includes two sections: featured & full 
+- Publication format can be edited in `_layouts/publications.html`, which is also included in `_layouts/home.html`. The layout not only defines reference formatting, but presents a short of featured publications on home page and a full list of publications in the publication tab through an if-else for loop
 - All pdf files of publications are stored in the `publications` folder directory
 
 #### header
