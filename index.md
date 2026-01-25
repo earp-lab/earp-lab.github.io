@@ -1,6 +1,6 @@
 ---
 layout: home 
-title: "EARP Lab Home"
+title: "Home"
 ---
 
 Insert introduction
