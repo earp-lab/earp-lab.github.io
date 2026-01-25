@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "PI"
+title: "Brian Earp"
 ---
 
 Researcher - Physics & Astronomy
