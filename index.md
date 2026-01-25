@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "??"
+title: "where is the title"
 ---
 
-???
+Insert introduction
