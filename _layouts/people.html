@@ -17,7 +17,7 @@ layout: default
     <p>Bio: {{ person.bio }}</p>
   </div>
   <div class="col-md-3">
-    <img src="{{ site.github.url }}/{{ person.image }}" alt="headshotNA" width="50%">
+    <img src="{{ site.github.url }}/{{ person.image }}" alt="headshotNA" width="100%">
   </div>
 </div>
 {% endfor %}
@@ -25,7 +25,7 @@ layout: default
 <h3 class="fw-bold border-bottom pb-3 mb-5">Postdoctoral Researcher</h3>
 {% for postdoc in site.data.settings.postdoc %}
 <div class="row g-5 mb-5">
-  <div class="col-md-6">
+  <div class="col-md-9">
     <h5>
       <a href="{{ postdoc.website }}" target="_blank" rel="noopener"> 
         {{ postdoc.name }}</a>
@@ -36,8 +36,8 @@ layout: default
     </p>
     <p>Bio: {{ postdoc.bio }}</p>
   </div>
-  <div class="col-md-6">
-    <img src="{{ site.github.url }}/{{ postdoc.image }}" alt="headshotNA" width="50%">
+  <div class="col-md-3">
+    <img src="{{ site.github.url }}/{{ postdoc.image }}" alt="headshotNA" width="100%">
   </div>
 </div>
 {% endfor %}
@@ -45,7 +45,7 @@ layout: default
 <h3 class="fw-bold border-bottom pb-3 mb-5">PG & UG Student</h3>
 {% for student in site.data.settings.student %}
 <div class="row g-5 mb-5">
-  <div class="col-md-6">
+  <div class="col-md-9">
     <h5>
       <a href="{{ student.website }}" target="_blank" rel="noopener"> 
         {{ student.name }}</a>
@@ -56,8 +56,8 @@ layout: default
     </p>
     <p>Bio: {{ student.bio }}</p>
   </div>
-  <div class="col-md-6">
-    <img src="{{ site.github.url }}/{{ student.image }}" alt="headshotNA" width="50%">
+  <div class="col-md-3">
+    <img src="{{ site.github.url }}/{{ student.image }}" alt="headshotNA" width="100%">
   </div>
 </div>
 {% endfor %}
