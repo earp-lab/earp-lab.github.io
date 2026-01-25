@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Lab Technician"
+title: "PI"
 ---
 
 Researcher - Physics & Astronomy
