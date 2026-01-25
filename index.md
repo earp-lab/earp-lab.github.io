@@ -1,6 +1,6 @@
 ---
-layout: home
-title: "where is the title"
+layout: home 
+title: "EARP Lab Home"
 ---
 
 Insert introduction
