@@ -11,23 +11,22 @@ people:
 - {name: 'person 2', 
   institution: 'Some University', 
   email: 'hello@university.edu', 
+  bio: 'insert bio',
   image: 'assets/img/primary-investigator.jpg'}
-- {name: 'person 3', 
-  institution: 'Some University',  
-  email: 'hello@university.edu', 
-  image: 'assets/img/lab-technician.jpg'}
 
 postdoc:
-- {name: 'postdoc 1', 
+- {name: 'postdoc name', 
   institution: 'Some University', 
   email: 'hello@university.edu', 
   bio: 'insert bio',
   image: 'assets/img/primary-investigator.jpg'}
 
 student: 
-- {name: 'student 1', 
+- {name: 'student name', 
   institution: 'Some University', 
-  image: 'assets/img/graduate-student.jpg'}
+  email: 'hello@university.edu', 
+  bio: 'insert bio',
+  image: 'assets/img/primary-investigator.jpg'}
 
 social:
 - {icon: 'github', link: 'https://github.com/LeNPaul'}
