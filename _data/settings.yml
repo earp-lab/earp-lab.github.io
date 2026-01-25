@@ -16,10 +16,11 @@ people:
   institution: 'Some University',  
   email: 'hello@university.edu', 
   image: 'assets/img/lab-technician.jpg', url: '/3-postdocs'}
+
+PG: 
 - {name: 'PG & UG Student', 
+  institution: 'Some University', 
   image: 'assets/img/graduate-student.jpg'}
-
-
 
 social:
 - {icon: 'github', link: 'https://github.com/LeNPaul'}
