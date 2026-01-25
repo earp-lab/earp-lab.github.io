@@ -14,7 +14,7 @@ layout: default
       <span class="text-muted">{{ person.institution }}</span>
       <a href="mailto:{{ person.email }}">{{ person.email }}</a>
     </p>
-    <p>Bio: {{ person.bio }}</p>
+    <p>{{ person.bio }}</p>
   </div>
   <div class="col-md-3">
     <img src="{{ site.github.url }}/{{ person.image }}" alt="headshotNA" width="100%">
@@ -34,7 +34,7 @@ layout: default
       <span class="text-muted">{{ postdoc.institution }}</span>
       <a href="mailto:{{ postdoc.email }}">{{ postdoc.email }}</a>
     </p>
-    <p>Bio: {{ postdoc.bio }}</p>
+    <p>{{ postdoc.bio }}</p>
   </div>
   <div class="col-md-3">
     <img src="{{ site.github.url }}/{{ postdoc.image }}" alt="headshotNA" width="100%">
@@ -54,7 +54,7 @@ layout: default
       <span class="text-muted">{{ student.institution }}</span>
       <a href="mailto:{{ student.email }}">{{ student.email }}</a>
     </p>
-    <p>Bio: {{ student.bio }}</p>
+    <p>{{ student.bio }}</p>
   </div>
   <div class="col-md-3">
     <img src="{{ site.github.url }}/{{ student.image }}" alt="headshotNA" width="100%">
