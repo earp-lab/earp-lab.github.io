@@ -1,7 +1,4 @@
 ---
+layout: people
 title: "People"
 ---
-
-??
-
-??
