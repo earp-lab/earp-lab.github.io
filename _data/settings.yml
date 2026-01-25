@@ -3,38 +3,61 @@ menu:
 - {name: 'publications', url: '/publications'}
 
 people:
-- {name: 'Brian D. Earp', 
-  institution: 'Some University', 
-  email: 'hello@university.edu', 
-  bio: 'insert bio',
+- {name: 'Brian D. Earp', url: 'https://www.brianearp.com/',
+  institution: 'National University of Singapore', 
+  email: 'bdearp@nus.edu.sg', 
+  bio: 'Associate Professor Brian D. Earp, PhD, is director of the Oxford-NUS Centre for Neuroethics and Society (OCNS) and the EARP Lab (Experimental Bioethics, Artificial Intelligence, and Relational Moral Psychology Lab) within the Centre for Biomedical Ethics, Yong Loo Lin School of Medicine, National University of Singapore (NUS). Brian is also an Associate Professor of Philosophy and of Psychology at NUS by courtesy. Brian holds degrees from Yale, Oxford, and Cambridge Universities and is a Research Associate of the Uehiro Oxford Institute at the University of Oxford. Brian is also Associate Director of the Yale-Hastings Program in Ethics and Health Policy at Yale University and The Hastings Center, and is an elected member of the UK Young Academy under the auspices of the British Academy and the Royal Society. See www.brianearp.com for more information.',
   image: 'assets/headshots/BrianDE.avif'}
-- {name: 'person 2', 
-  institution: 'Some University', 
-  email: 'hello@university.edu', 
+  
+- {name: 'Ivar R. Hannikainen', url: 'https://moralsciencelab.com/people/',
+  institution: 'University of Granada', 
+  email: 'ivar@ugr.es', 
   bio: 'insert bio',
-  image: 'assets/img/primary-investigator.jpg'}
+  image: 'assets/headshots/IvarRH.png'}
+
+- {name: 'Vilius Dranseika', url: 'https://www.dranseika.lt/',
+  institution: 'Jagiellonian University', 
+  email: 'vilius.dranseika@uj.edu.pl', 
+  bio: 'insert bio',
+  image: 'assets/headshots/ViliusD.jpg'}
 
 postdoc:
-- {name: '', 
-  institution: '', 
-  email: '', 
-  bio: '',
-  image: 'assets/img/'}
+
+- {name: 'Shalom Chalson', 
+  institution: 'National University of Singapore', 
+  email: 'shalom.chalson@nus.edu.sg', 
+  bio: 'Shalom Chalson is a Research Fellow at the Centre for Biomedical Ethics (CBmE) in the Yong Loo Lin School of Medicine, National University of Singapore. She works in social, political, and moral philosophy. Her main research has been on the conceptual foundations of wrongful discrimination. Before joining CBmE, Shalom pursued her PhD in Philosophy at the Australian National University. She holds a Master’s in Political Science from the National University of Singapore and a Bachelor of Arts (with Honours) in Philosophy from Nanyang Technological University.',
+  image: 'assets/headshots/ShalomC.avif'}
+
+- {name: 'Clint Hurshman', 
+  institution: 'National University of Singapore', 
+  email: 'clinthurshman@nus.edu.sg', 
+  bio: 'Clint Hurshman holds a PhD in philosophy from the University of Kansas and joined CBmE as a research fellow in 2025. Clint’s research interests include: AI ethics (especially transparency, trust in AI, and privacy), philosophy of biology, and philosophy of social science.',
+  image: 'assets/headshots/ClintH.avif'}
+  
 - {name: 'Elzė Sigutė Mikalonytė', 
   institution: 'National University of Singapore', 
   email: 'esmikalonyte@nus.edu.sg', 
   bio: 'Elzė Sigutė Mikalonytė is a Research Fellow at the Centre for Biomedical Ethics. She is an experimental philosopher working in aesthetics, metaphysics, and moral psychology. Previously, she was a Research Associate in the Department of Psychology and a Junior Research Fellow at Wolfson College, University of Cambridge. She received her BA, MA, and PhD in philosophy from Vilnius University, Lithuania. She spent part of her PhD studies at the Institut Jean Nicod in Paris, France. Before turning to philosophy, she studied violin at the Vilnius Conservatoire. She is a steering committee member of the European Network for Philosophy of Music and a board member of the Lithuanian Philosophical Association.',
-  image: 'assets/img/primary-investigator.jpg'}
-- {name: '', 
-  institution: '', 
-  email: '', 
-  bio: '',
-  image: 'assets/img/'}
-- {name: '', 
-  institution: '', 
-  email: '', 
-  bio: '',
-  image: 'assets/img/'}
+  image: 'assets/headshots/ElzeSM.avif'}
+  
+- {name: 'Yuxin Liu', 
+  institution: 'National University of Singapore', 
+  email: 'yuxinliu@nus.edu.sg', 
+  bio: 'Yuxin joined the Centre for Biomedical Ethics as a Research Fellow and Lab Manager for A/P Brian Earp’s EARP Lab in 2026. She holds, or will soon hold, a PhD, MScR, and MA in Psychology from the University of Edinburgh. Her doctoral research examines the concept of AI moral enhancement, aiming to ground proposals for Artificial Moral Advisors in empirical evidence of how individuals are likely to respond to them. Her research interests include moral psychology, experimental philosophy/bioethics, machine (meta)ethics, and AI ethics.',
+  image: 'assets/headshots/YuxinL.avif'}
+
+- {name: 'Lydia Tsiakiri', 
+  institution: 'National University of Singapore', 
+  email: 'ltsiakiri@nus.edu.sg', 
+  bio: 'Lydia joined the Centre for Biomedical Ethics (CBmE) as a Research Fellow in 2026. She holds a PhD in Political Science from Aarhus University, Denmark. Her doctoral thesis explored responsibility-sensitive approaches to healthcare resource allocation and their potentially discriminatory implications. She also holds a MSc in Bioethics and Society from King’s College London, UK, and a BA in Philosophy from the National and Kapodistrian University of Athens, Greece. Her current research interests include bioethics, personal responsibility, distributive justice, discrimination, and experimental philosophy.',
+  image: 'assets/headshots/LydiaT.avif'}
+  
+- {name: 'Danni Yang', 
+  institution: 'National University of Singapore', 
+  email: 'danni.yang@nus.edu.sg', 
+  bio: 'Danni Yang is a Research Fellow at the Centre for Biomedical Ethics at the National University of Singapore, working with A/Prof Brian Earp and contributing to Prof Julian Savulescu’s Collective Reflective Equilibrium in Practice (CREP) programme. She received her PhD in Psychology from South China Normal University and was previously a visiting doctoral scholar at Yale University under Prof Yarrow Dunham. Danni’s research integrates moral psychology, experimental philosophy, and AI ethics to examine how people navigate moral trade-offs across interpersonal and intergroup contexts, with a particular focus on harm-sensitivity, cognitive style, and relational norms. Her work also extends to human–AI interaction. She has collaborated with Prof Karl F. MacDorman at Indiana University on research exploring how individuals perceive and morally evaluate artificial agents, especially in situations involving social decision-making and trust. Across her projects, she employs large-scale behavioural experiments, cross-cultural designs, and multi-method approaches to understand how people reason about harm, responsibility, and emerging technologies.',
+  image: 'assets/headshots/DanniY.avif'}
 
 
 student: 
@@ -42,7 +65,7 @@ student:
   institution: 'Some University', 
   email: 'hello@university.edu', 
   bio: 'insert bio',
-  image: 'assets/img/primary-investigator.jpg'}
+  image: 'assets/headshots/'}
 
 social:
 - {icon: 'github', link: 'https://github.com/LeNPaul'}
