@@ -8,9 +8,15 @@ layout: default
 {% for person in site.data.settings.people %}
 <div class="row g-5 mb-5">
   <div class="col-md-6">
-    <h5>{{ person.name }}</h5>
-    <p>{{ person.institution }}</p>
-    <p>{{ person.email }}</p>
+    <h5>
+      <a href="{{ person.website }}" target="_blank" rel="noopener">
+        {{ person.name }}
+      </a>
+    </h5>
+    <p class="d-flex gap-3">
+      <span>{{ person.institution }}</span>
+      <span>{{ person.email }}</span>
+    </p>
     <p>Bio: {{ person.bio }}</p>
   </div>
   <div class="col-md-6">
