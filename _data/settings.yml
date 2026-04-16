@@ -7,76 +7,171 @@ people:
 - {name: 'Brian D. Earp', 
   website: 'https://www.brianearp.com/',
   institution: 'National University of Singapore', 
-  email: 'bdearp@nus.edu.sg', 
+  #email: 'bdearp@nus.edu.sg', 
   bio: 'Associate Professor Brian D. Earp, PhD, is director of the Oxford-NUS Centre for Neuroethics and Society (OCNS) and the EARP Lab (Experimental Bioethics, Artificial Intelligence, and Relational Moral Psychology Lab) within the Centre for Biomedical Ethics, Yong Loo Lin School of Medicine, National University of Singapore (NUS). Brian is also an Associate Professor of Philosophy and of Psychology at NUS by courtesy. Brian holds degrees from Yale, Oxford, and Cambridge Universities and is a Research Associate of the Uehiro Oxford Institute at the University of Oxford. Brian is also Associate Director of the Yale-Hastings Program in Ethics and Health Policy at Yale University and The Hastings Center, and is an elected member of the UK Young Academy under the auspices of the British Academy and the Royal Society. See www.brianearp.com for more information.',
   image: 'assets/headshots/BrianDE.avif'}
   
 - {name: 'Ivar R. Hannikainen', 
   website: 'https://moralsciencelab.com/people/',
+  #website: 'https://www.ugr.es/en/staff/ivar-allan-rodriguez-hannikainen',
   institution: 'University of Granada', 
-  email: 'ivar@ugr.es', 
-  bio: 'insert bio',
+  #email: 'ivar@ugr.es', 
+  bio: 'I received my PhD in Philosophy from the University of Sheffield (2014). After receiving my PhD, I held a postdoctoral position at the Department of Law at the Pontifical Catholic University of Rio de Janeiro (2015-2016), a fellowship at Getulio Vargas Foundation (2016), and an assistant professorship in the Department of Law at the Pontifical Catholic University of Rio de Janeiro (2017-2019). I have been at the University of Granada since 2020, and currently hold a Ramón y Cajal fellowship (2022-). Through my career, I have been heavily invested in interdisciplinary projects at the interface of philosophy, psychology and law. I have given invited lectures around the world at universities in the United States (Yale University, Harvard University), the United Kingdom (University of Oxford) Mexico (UNAM), Colombia (Universidad Nacional de Colombia), Morocco (Université Polytechnique Mohammed VI), Poland (Jagiellonian University) the Czech Republic (Charles University), Bulgaria (New Bulgarian University) and Romania (University of Bucharest). Outside academia, I enjoy sports, cooking and taking naps.',
   image: 'assets/headshots/IvarRH.png'}
 
 - {name: 'Vilius Dranseika', 
   website: 'https://www.dranseika.lt/',
+  #website: 'https://incet.uj.edu.pl/vilius-dranseika',
   institution: 'Jagiellonian University', 
-  email: 'vilius.dranseika@uj.edu.pl', 
-  bio: 'insert bio',
+  #email: 'vilius.dranseika@uj.edu.pl', 
+  bio: 'I am a philosopher at Jagiellonian University Interdisciplinary Centre for Ethics in Kraków, Poland, where I serve as a university professor (profesor uczelni). My research focuses on the psychological underpinnings of philosophical concepts and theories. Recently, the main themes of my work have been personal identity, death, and memory. I am also interested in computational approaches—ranging from natural language processing to citation analysis—applied to philosophy, including its history. My publication list. I hold a PhD in Philosophy from the Centre for Philosophy of Memory, Grenoble Alpes University, France.',
   image: 'assets/headshots/ViliusD.jpg'}
+
+- {name: 'Sebastian Porsdam Mann', 
+  website: 'https://jura.ku.dk/cebil/staff/cebil/?pure=en/persons/623446',
+  institution: 'University of Copenhagen', 
+  #email: 'sebastian.porsdam.mann@jur.ku.dk', 
+  bio: 'Sebastian Porsdam Mann is an Assistant Professor at the Center for Advanced Studies in Bioscience Innovation Law at the University of Copenhagen. His background is in philosophy, neuroscience, applied ethics (BA, PhD, University of Cambridge) and international human rights law (DPhil pending, University of Oxford). He has held postdoctoral positions at Harvard Medical School and the Universities of Oxford and Copenhagen, the latter supported by a personal grant by the Carlsberg Foundation. His work focuses on the practical potential and regulatory conditions necessary for novel technologies to facilitate scientific progress and normative goals, with a focus on blockchain, generative artificial intelligence, and the human right to science. He is co-author/editor, recently, of The Right to Science: Then and Now (Cambridge University Press, 2021) and Scientific Freedom: The Heart of the Right to Science (Rowman & Littlefield, 2023). His work on fine-tuning large language models on personal academic output is currently the most read article in AJOB, the nr. 1 bioethics journal.',
+  image: 'assets/headshots/SebastianPM.jpeg'}
+
+- {name: 'Xiaojun Ding', 
+  website: 'https://pwl.fcsh.unl.pt/xiaojun-ding/',
+  #website: 'https://rwxy.xjtu.edu.cn/info/1091/9326.htm',
+  institution: 'Xi’an Jiaotong University', 
+  #email: 'xiaojunding@xjtu.edu.cn', 
+  bio: 'Xiaojun Ding holds a PhD in Philosophy (2016. Dialogue, Analysis and Therapy- The Conception and Construction of Analytic Philosophical Practice. Nanjing University, China) and is an Associate Professor of Philosophy Department at Xi’an Jiaotong University (China). Her priority lines of research are on philosophical practice, logic and critical thinking, analytic philosophy, experimental philosophy, epistemology, philosophy of science and technology, moral psychology, and positive psychology. She has directed several national and international research projects in the domains of philosophical practice and philosophy of artificial intelligence (AI).',
+  image: 'assets/headshots/XiaojunD.png'}
+
+- {name: 'Peng Liu', 
+  website: 'https://person.zju.edu.cn/en/pengliu',
+  institution: 'National University of Singapore', 
+  #email: 'pengliu86@zju.edu.cn', 
+  bio: 'Dr. Peng Liu is a researcher and Ph. D. advisor at the Center for Psychological Sciences, Zhejiang University. He received his B.S. in Industrial Engineering from Huazhong University of Science and Technology in 2009, and Ph.D. in Management Science and Engineering (human factors direction) from Tsinghua University in 2014. Before joining Zhejiang University, he was an assistant professor and then associate professor at the College of Management and Economics, Tianjin University and visiting researcher at the Department of Experimental Psychology, University of Oxford, UK. He is the first-author or corresponding-author of 30 papers in SCI/SSCI journals, including one ESI hot paper and five ESI highly-ranked papers. He currently focuses on interdisciplinary research on automated vehicles, including socially acceptable risk, social acceptance, user experience, mixed-traffic, human-machine co-driving, responsibility, ethics, and morality. Relevant works have been published in Journal of Experimental Psychology: Applied, Risk Analysis, Reliability Engineering and System Safety, Accident Analysis & Prevention, Transportation Research Part A/C, and Technological Forecasting & Social Change, and have been reported by ScienceDaily and other social medias. In addition, he is interested in human factors on system safety in complex systems, and investigates operator errors and reliability in digital main control rooms of nuclear power plants. He is the editorial board member or young academic editor of three international journals. He has been granted two projects by National Natural Science Foundation of China. He has been nominated as one of the top 2% scientists in the world, according to a global list recently released by Standford University and Elsevier in 2022. (https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/4).',
+  image: 'assets/headshots/PengL.png'}
+  
 
 postdoc:
 
 - {name: 'Shalom Chalson', 
   website: 'https://www.shalomchalson.com/about', 
+  #website: 'https://medicine.nus.edu.sg/cbme/people_uri/shalom-chalson/', 
   institution: 'National University of Singapore', 
-  email: 'shalom.chalson@nus.edu.sg', 
+  #email: 'shalom.chalson@nus.edu.sg', 
   bio: 'Shalom Chalson is a Research Fellow at the Centre for Biomedical Ethics (CBmE) in the Yong Loo Lin School of Medicine, National University of Singapore. She works in social, political, and moral philosophy. Her main research has been on the conceptual foundations of wrongful discrimination. Before joining CBmE, Shalom pursued her PhD in Philosophy at the Australian National University. She holds a Master’s in Political Science from the National University of Singapore and a Bachelor of Arts (with Honours) in Philosophy from Nanyang Technological University.',
   image: 'assets/headshots/ShalomC.avif'}
 
 - {name: 'Clint Hurshman', 
   website: 'https://medicine.nus.edu.sg/cbme/people_uri/clint-hurshman/',
   institution: 'National University of Singapore', 
-  email: 'clinthurshman@nus.edu.sg', 
+  #email: 'clinthurshman@nus.edu.sg', 
   bio: 'Clint Hurshman holds a PhD in philosophy from the University of Kansas and joined CBmE as a research fellow in 2025. Clint’s research interests include: AI ethics (especially transparency, trust in AI, and privacy), philosophy of biology, and philosophy of social science.',
   image: 'assets/headshots/ClintH.avif'}
   
 - {name: 'Elzė Sigutė Mikalonytė', 
-  website: '',
+  website: 'https://mikalonyte.com/',
+  #website: 'https://medicine.nus.edu.sg/cbme/people_uri/elze-mikalonyte/',
   institution: 'National University of Singapore', 
-  email: 'esmikalonyte@nus.edu.sg', 
+  #email: 'esmikalonyte@nus.edu.sg', 
   bio: 'Elzė Sigutė Mikalonytė is a Research Fellow at the Centre for Biomedical Ethics. She is an experimental philosopher working in aesthetics, metaphysics, and moral psychology. Previously, she was a Research Associate in the Department of Psychology and a Junior Research Fellow at Wolfson College, University of Cambridge. She received her BA, MA, and PhD in philosophy from Vilnius University, Lithuania. She spent part of her PhD studies at the Institut Jean Nicod in Paris, France. Before turning to philosophy, she studied violin at the Vilnius Conservatoire. She is a steering committee member of the European Network for Philosophy of Music and a board member of the Lithuanian Philosophical Association.',
   image: 'assets/headshots/ElzeSM.avif'}
   
 - {name: 'Yuxin Liu', 
   website: 'https://liu-yuxin-psych.github.io/',
+  #website: 'https://medicine.nus.edu.sg/cbme/people_uri/liu-yuxin/',
   institution: 'National University of Singapore', 
-  email: 'yuxinliu@nus.edu.sg', 
+  #email: 'yuxinliu@nus.edu.sg', 
   bio: 'Yuxin joined the Centre for Biomedical Ethics as a Research Fellow and Lab Manager for A/P Brian Earp’s EARP Lab in 2026. She holds, or will soon hold, a PhD, MScR, and MA in Psychology from the University of Edinburgh. Her doctoral research examines the concept of AI moral enhancement, aiming to ground proposals for Artificial Moral Advisors in empirical evidence of how individuals are likely to respond to them. Her research interests include moral psychology, experimental philosophy/bioethics, machine (meta)ethics, and AI ethics.',
   image: 'assets/headshots/YuxinL.avif'}
 
 - {name: 'Lydia Tsiakiri', 
   website: 'https://medicine.nus.edu.sg/cbme/people_uri/lydia-tsiakiri/',
   institution: 'National University of Singapore', 
-  email: 'ltsiakiri@nus.edu.sg', 
+  #email: 'ltsiakiri@nus.edu.sg', 
   bio: 'Lydia joined the Centre for Biomedical Ethics (CBmE) as a Research Fellow in 2026. She holds a PhD in Political Science from Aarhus University, Denmark. Her doctoral thesis explored responsibility-sensitive approaches to healthcare resource allocation and their potentially discriminatory implications. She also holds a MSc in Bioethics and Society from King’s College London, UK, and a BA in Philosophy from the National and Kapodistrian University of Athens, Greece. Her current research interests include bioethics, personal responsibility, distributive justice, discrimination, and experimental philosophy.',
   image: 'assets/headshots/LydiaT.avif'}
   
 - {name: 'Danni Yang', 
   website: 'https://medicine.nus.edu.sg/cbme/people_uri/yang-danni/',
   institution: 'National University of Singapore', 
-  email: 'danni.yang@nus.edu.sg', 
+  #email: 'danni.yang@nus.edu.sg', 
   bio: 'Danni Yang is a Research Fellow at the Centre for Biomedical Ethics at the National University of Singapore, working with A/Prof Brian Earp and contributing to Prof Julian Savulescu’s Collective Reflective Equilibrium in Practice (CREP) programme. She received her PhD in Psychology from South China Normal University and was previously a visiting doctoral scholar at Yale University under Prof Yarrow Dunham. Danni’s research integrates moral psychology, experimental philosophy, and AI ethics to examine how people navigate moral trade-offs across interpersonal and intergroup contexts, with a particular focus on harm-sensitivity, cognitive style, and relational norms. Her work also extends to human–AI interaction. She has collaborated with Prof Karl F. MacDorman at Indiana University on research exploring how individuals perceive and morally evaluate artificial agents, especially in situations involving social decision-making and trust. Across her projects, she employs large-scale behavioural experiments, cross-cultural designs, and multi-method approaches to understand how people reason about harm, responsibility, and emerging technologies.',
   image: 'assets/headshots/DanniY.avif'}
 
+- {name: 'Shengyu Zhao', 
+  website: 'https://medicine.nus.edu.sg/cbme/people_uri/zhao-shengyu/',
+  institution: 'National University of Singapore', 
+  #email: 's.zhao@nus.edu.sg', 
+  bio: 'Shengyu joined the Centre for Biomedical Ethics (CBME) as a Research Fellow in 2025. She has a background in the social sciences and holds both an MSc and a PhD in bioethics from the University of Bristol. Her doctoral research focuses on empirical bioethics and explores ethical challenges in palliative care in the Chinese mainland. Shengyu’s research interests include end-of-life ethics, palliative care ethics, and healthcare ethics in Asian cultural contexts.',
+  image: 'assets/headshots/ShengyuZ.avif'}
+
+- {name: 'Fei Song', 
+  website: 'https://sites.google.com/view/feisongphil/home?authuser=0',
+  #website: 'https://medicine.nus.edu.sg/cbme/people_uri/song-fei/',
+  institution: 'National University of Singapore', 
+  #email: 'songfei06@nus.edu.sg', 
+  bio: 'Song Fei is a Senior Research Fellow at the Centre for Biomedical Ethics at the National University of Singapore. Before joining NUS, she served as a Research Assistant Professor at Lingnan University in Hong Kong and as an Assistant Professor at Nazarbayev University in Kazakhstan. She holds a Ph.D. in Philosophy from the University of Hong Kong, an M.A. in Philosophy from the Australian National University, and dual bachelor’s degrees in Philosophy and Psychology from East China Normal University. Her research focuses on normative and applied ethics of risk. She collaborates with psychologists on topics in behavioural ethics, particularly concerning moral decision-making under uncertainty. She also works on the ethics of artificial intelligence, with an emphasis on the development of trustworthy AI. Her current interests centre on moral decision-making under uncertainty in clinical contexts, the ethics of risk in medical practice, and the ethical implications of emerging medical technologies. She serves on the editorial board of the Asian Journal of Philosophy and is a registered psychological counsellor in China.',
+  image: 'assets/headshots/FeiS.avif'}
 
 student: 
-- {name: 'student name', 
+
+- {name: 'Maryam Ali Khan', 
+  website: 'https://medicine.nus.edu.sg/cbme/people_uri/maryam-khan/',
+  institution: 'National University of Singapore', 
+  #email: 'https://medicine.nus.edu.sg/cbme/people_uri/maryam-khan/', 
+  bio: 'Maryam holds a BSc in Psychology from Oxford Brookes University, and an MSc in Psychological Research from the University of Edinburgh. Prior to beginning her PhD, Maryam worked at the Uehiro Oxford Institute, where she was a research assistant for the EU-funded Counterfactual Assessment and Valuation for Awareness Architecture (CAVAA) project, and concurrently, the lab manager for the Philosophical Moral Psychology Lab. Her research interests include moral psychology, experimental philosophy, and the human relationship with AI.',
+  image: 'assets/headshots/MaryamAliK.avif'}
+
+- {name: 'Zuriel Hassirim', 
+  website: 'https://medicine.nus.edu.sg/cbme/people_uri/zuriel-hassirim/',
+  institution: 'National University of Singapore', 
+  #email: 'zuriel.hassirim@u.nus.edu', 
+  bio: 'Zuriel has a background in the Cognitive Sciences and holds an MA (Honours) and MSc from the University of Edinburgh. She has also done research focused on learning, attention and mindfulness interventions in a Neuropsychology lab with the Centre for Sleep and Cognition in NUS. Her research interests lie generally in the realm of 4E cognition, experimental philosophy,  identity and the role of language in cognition.',
+  image: 'assets/headshots/ZurielH.avif'}
+
+- {name: 'Niñoval Flores Pacaol', 
+  website: 'https://medicine.nus.edu.sg/cbme/people_uri/ninoval-flores-pacaol/',
+  institution: 'National University of Singapore', 
+  #email: 'ninoval.pacaol@u.nus.edu', 
+  bio: 'Niñoval F. Pacaol is a licensed professional teacher. He received his undergraduate degree in Secondary Social Studies Education and his master’s degree in Educational Management from Leyte Normal University in the Philippines. Prior to starting his PhD, he worked in three Philippine higher education institutions, including state universities and a community college, where he primarily taught social science, research, and professional education courses. Alongside his teaching, he also held leadership roles in research offices with managerial responsibilities. His doctoral dissertation will defend the moral status of de-extinct animals using a non-Western (African) moral theory, while examining its implications for dominant debates in artificial intelligence, enhancement, and medicine. His research interests broadly include empirical bioethics, particularly exploratory research on emerging technologies, and theoretical bioethics, such as the normative analysis of the varied applications and misapplications of biotechnologies. He is also interested in climate politics and ethics, especially the concept of the state of exception and climate engineering, as well as critical pedagogy, including social reconstructionist approaches to understanding transformations in education. His work further engages with political theory and death studies. His ideas and ongoing projects are shaped by his years of teaching and research, as well as ongoing dialogue with mentors, colleagues, and students. In his personal intellectual practice, he regularly engages with scholarship across the social sciences and humanities, particularly moral philosophy, and occasionally examines popular culture, including anime, as a site for philosophical and ethical analysis.',
+  image: 'assets/headshots/NinovalFP.avif'}
+
+- {name: 'Shilpa Surendran', 
+  website: 'https://medicine.nus.edu.sg/cbme/people_uri/shilpa-surendran/',
+  institution: 'National University of Singapore', 
+  #email: 'shilpa.s@nus.edu.sg', 
+  bio: 'Shilpa is trained in medicine and holds a master’s degree in public health. She is currently pursuing her PhD part time with the Centre for Biomedical Ethics, NUS. At present, Shilpa’s research interest range widely in applied ethics, with more specific interests in bodily autonomy and integrity, healthcare decision-making and empirical bioethics.',
+  image: 'assets/headshots/ShilpaS.avif'}
+
+- {name: 'Sankalpa Ghose', 
+  website: 'https://www.sankalpa.ai/',
+  #website: 'https://medicine.nus.edu.sg/cbme/people_uri/sankalpa-ghose/',
+  institution: 'National University of Singapore', 
+  #email: 'sankalpa@u.nus.edu', 
+  bio: 'Sankalpa is a PhD student and President’s Graduate Fellow at the Centre for Biomedical Ethics, NUS. He has a background in moral philosophy and biomedical engineering, has started companies in telemedicine and augmented reality, and nonprofits in global health in human and veterinary medicine. His research interests include normative guidance systems, clinical-decision pathways, moral patiency, incapacitated subjects, representative agents, and product-led philosophy.',
+  image: 'assets/headshots/SankalpaG.avif'}
+
+- {name: 'Faisal Feroz', 
+  website: 'https://www.uehiro.ox.ac.uk/people/faisal-feroz',
+  institution: 'University of Oxford', 
+  #email: 'faisal.feroz@some.ox.ac.uk', 
+  bio: 'Faisal is a DPhil candidate in Experimental Psychology at Somerville College, University of Oxford, funded by the Humanities, Arts, and Social Sciences (HASS) International PhD Scholarship. He is supervised by Professor Charles Spence and Dr Joanna Demaree-Cotton. His DPhil examines the cognitive processes that underpin moral reasoning and ethical decision-making, with a focus on how people evaluate trade-offs in morally significant domains. One area of application is food ethics, where he investigates how individuals respond to emerging technologies such as cultured and plant-based meat. Faisal previously completed a BA in Experimental Psychology at Wadham College, Oxford. Between his BA and DPhil, Faisal worked as a Research Assistant and Lab Manager in the EARP Lab (Experimental Bioethics, Artificial Intelligence, and Relational Moral Psychology) at the Centre for Biomedical Ethics. ',
+  image: 'assets/headshots/FaisalF.jpg'}
+
+- {name: 'Yueying Chu', 
+  website: 'https://yueyingchu.github.io/',
+  institution: 'Zhejiang University', 
+  #email: 'yueying.chu@zju.edu.cn', 
+  bio: 'I am currently a PhD candidate in Psychology at Zhejiang University, affiliated with the Center for Psychological Sciences and the Department of Psychology and Behavioral Sciences. Since 2025, I have also been a visiting PhD student at the Centre for Biomedical Ethics, National University of Singapore. My research integrates perspectives from machine psychology and moral psychology to explore how individuals make moral judgments in both human and human–AI contexts. I am particularly interested in the role of interpersonal relationships in shaping moral evaluations and responsibility attributions. My work combines experimental methods with behavioral analysis to understand how emerging technologies challenge and transform moral cognition.',
+  image: 'assets/headshots/YueyingC.png'}
+
+- {name: '', 
   website: '',
-  institution: 'University of X', 
-  email: 'hello@university.edu', 
-  bio: 'insert bio',
+  institution: 'National University of Singapore', 
+  #email: '', 
+  bio: '',
   image: 'assets/headshots/'}
+
+
 
 social:
 - {icon: 'github', link: 'https://github.com/LeNPaul'}
