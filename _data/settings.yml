@@ -8,7 +8,7 @@ people:
   website: 'https://www.brianearp.com/',
   institution: 'National University of Singapore', 
   #email: 'bdearp@nus.edu.sg', 
-  bio: 'Associate Professor Brian D. Earp, PhD, is director of the Oxford-NUS Centre for Neuroethics and Society (OCNS) and the EARP Lab (Experimental Bioethics, Artificial Intelligence, and Relational Moral Psychology Lab) within the Centre for Biomedical Ethics, Yong Loo Lin School of Medicine, National University of Singapore (NUS). Brian is also an Associate Professor of Philosophy and of Psychology at NUS by courtesy. Brian holds degrees from Yale, Oxford, and Cambridge Universities and is a Research Associate of the Uehiro Oxford Institute at the University of Oxford. Brian is also Associate Director of the Yale-Hastings Program in Ethics and Health Policy at Yale University and The Hastings Center, and is an elected member of the UK Young Academy under the auspices of the British Academy and the Royal Society. See www.brianearp.com for more information.',
+  bio: 'Associate Professor Brian D. Earp, PhD, is director of the Oxford-NUS Centre for Neuroethics and Society (OCNS) and the EARP Lab (Experimental Bioethics, Artificial Intelligence, and Relational Moral Psychology Lab) within the Centre for Biomedical Ethics, Yong Loo Lin School of Medicine, National University of Singapore (NUS). Brian is also an Associate Professor of Philosophy and of Psychology at NUS by courtesy. Brian holds degrees from Yale, Oxford, and Cambridge Universities and is a Research Associate of the Uehiro Oxford Institute at the University of Oxford. Brian is also Associate Director of the Yale-Hastings Program in Ethics and Health Policy at Yale University and The Hastings Center, and is an elected member of the UK Young Academy under the auspices of the British Academy and the Royal Society.',
   image: 'assets/headshots/BrianDE.avif'}
   
 - {name: 'Ivar R. Hannikainen', 
@@ -164,17 +164,10 @@ student:
   bio: 'I am currently a PhD candidate in Psychology at Zhejiang University, affiliated with the Center for Psychological Sciences and the Department of Psychology and Behavioral Sciences. Since 2025, I have also been a visiting PhD student at the Centre for Biomedical Ethics, National University of Singapore. My research integrates perspectives from machine psychology and moral psychology to explore how individuals make moral judgments in both human and human–AI contexts. I am particularly interested in the role of interpersonal relationships in shaping moral evaluations and responsibility attributions. My work combines experimental methods with behavioral analysis to understand how emerging technologies challenge and transform moral cognition.',
   image: 'assets/headshots/YueyingC.png'}
 
-- {name: '', 
-  website: '',
-  institution: 'National University of Singapore', 
-  #email: '', 
-  bio: '',
-  image: 'assets/headshots/'}
-
 
 
 social:
-- {icon: 'github', link: 'https://github.com/LeNPaul'}
-- {icon: 'twitter', link: 'https://twitter.com/paululele'}
-- {icon: 'instagram', link: 'https://instagram.com/paululele'}
-- {icon: 'linkedin', link: 'https://linkedin.com/in/lenpaul'}
+#- {icon: 'github', link: 'https://github.com/LeNPaul'}
+#- {icon: 'twitter', link: 'https://twitter.com/paululele'}
+#- {icon: 'instagram', link: 'https://instagram.com/paululele'}
+#- {icon: 'linkedin', link: 'https://linkedin.com/in/lenpaul'}
