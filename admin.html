@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EARP Lab — Content Editor</title>
+  <style>
+    :root{ --accent:#2c6bed; --accent-2:#0ea5a8; --line:#d9e1ec; --muted:#5b6b7d; --bg:#f3f6fb; }
+    *{ box-sizing:border-box; }
+    body{ font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif; margin:0; background:var(--bg); color:#102033; line-height:1.5; }
+    header{ background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#fff; padding:22px 26px; }
+    header h1{ margin:0; font-size:1.4rem; }
+    header p{ margin:6px 0 0; opacity:.92; font-size:.92rem; }
+    .wrap{ max-width:920px; margin:0 auto; padding:22px 18px 80px; }
+    .bar{ position:sticky; top:0; z-index:5; background:rgba(243,246,251,.92); backdrop-filter:blur(8px); padding:12px 0; display:flex; gap:10px; flex-wrap:wrap; border-bottom:1px solid var(--line); }
+    button{ font-family:inherit; cursor:pointer; border-radius:10px; border:1px solid var(--line); background:#fff; padding:9px 14px; font-size:.9rem; font-weight:600; color:#102033; }
+    button:hover{ border-color:var(--accent); }
+    button.primary{ background:var(--accent); color:#fff; border-color:var(--accent); }
+    button.danger{ color:#b3261e; border-color:#f1c6c2; }
+    button.small{ padding:5px 10px; font-size:.82rem; }
+    details.section{ background:#fff; border:1px solid var(--line); border-radius:14px; margin-top:16px; overflow:hidden; }
+    details.section > summary{ cursor:pointer; padding:16px 18px; font-weight:700; font-size:1.05rem; list-style:none; display:flex; justify-content:space-between; align-items:center; }
+    details.section > summary::-webkit-details-marker{ display:none; }
+    details.section > summary::after{ content:"▸"; color:var(--muted); transition:transform .2s; }
+    details.section[open] > summary::after{ transform:rotate(90deg); }
+    .body{ padding:0 18px 18px; }
+    .card{ border:1px solid var(--line); border-radius:12px; padding:14px; margin-top:12px; background:#fbfcfe; }
+    .grp-title{ font-weight:700; margin:18px 0 4px; color:var(--accent); }
+    label{ display:block; font-size:.78rem; font-weight:600; color:var(--muted); margin:9px 0 3px; text-transform:uppercase; letter-spacing:.03em; }
+    input,textarea,select{ width:100%; font-family:inherit; font-size:.92rem; padding:9px 11px; border:1px solid var(--line); border-radius:9px; background:#fff; color:#102033; }
+    textarea{ min-height:90px; resize:vertical; }
+    .row{ display:flex; gap:10px; flex-wrap:wrap; }
+    .row > div{ flex:1; min-width:180px; }
+    .card-head{ display:flex; justify-content:space-between; align-items:center; gap:10px; }
+    .card-head strong{ font-size:.98rem; }
+    .hint{ font-size:.82rem; color:var(--muted); margin:4px 0 0; }
+    .toast{ position:fixed; bottom:22px; left:50%; transform:translateX(-50%); background:#102033; color:#fff; padding:12px 20px; border-radius:12px; opacity:0; transition:opacity .25s; font-size:.9rem; z-index:20; }
+    .toast.show{ opacity:1; }
+    code{ background:#eef2f8; padding:1px 5px; border-radius:5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EARP Lab — Content Editor</h1>
+    <p>Edit the website without touching code. When you are done, click <strong>Download data.js</strong> and upload the file to GitHub (replacing the old <code>data.js</code>).</p>
+  </header>
+  <div class="wrap">
+    <div class="bar">
+      <button class="primary" id="download">⬇ Download data.js</button>
+      <button id="preview">↗ Open live site</button>
+      <button id="reset">↺ Reset changes</button>
+      <span class="hint" style="align-self:center">Changes here are not saved until you download and upload the file.</span>
+    </div>
+
+    <details class="section" open>
+      <summary>Lab name & about</summary>
+      <div class="body">
+        <label>Lab name</label>
+        <input id="labName" />
+        <label>Subtitle</label>
+        <input id="labSub" />
+        <label>About text (Home page)</label>
+        <textarea id="aboutText"></textarea>
+      </div>
+    </details>
+
+    <details class="section">
+      <summary>People</summary>
+      <div class="body" id="peopleBody"></div>
+    </details>
+
+    <details class="section">
+      <summary>Publications</summary>
+      <div class="body" id="pubsBody">
+        <p class="hint">Paste each citation in APA 7th format. Use <code>&lt;em&gt;Journal&lt;/em&gt;</code> to italicise. Tick "featured" to also show it on the Home page.</p>
+        <div id="pubsList"></div>
+        <button class="small" id="addPub" style="margin-top:12px">+ Add publication</button>
+      </div>
+    </details>
+
+    <details class="section">
+      <summary>News & updates</summary>
+      <div class="body" id="newsBody">
+        <div id="newsList"></div>
+        <button class="small" id="addNews" style="margin-top:12px">+ Add update</button>
+      </div>
+    </details>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="data.js"></script>
+  <script>
+    const clone = o => JSON.parse(JSON.stringify(o));
+    const ORIGINAL = clone(window.SITE_DATA || {});
+    let M = clone(ORIGINAL);
+    const $ = id => document.getElementById(id);
+    const toast = msg => { const t=$('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2200); };
+
+    function renderTop(){
+      $('labName').value = M.lab?.name || '';
+      $('labSub').value  = M.lab?.subtitle || '';
+      $('aboutText').value = M.about || '';
+    }
+    $('labName').oninput = e => { M.lab = M.lab||{}; M.lab.name = e.target.value; };
+    $('labSub').oninput  = e => { M.lab = M.lab||{}; M.lab.subtitle = e.target.value; };
+    $('aboutText').oninput = e => { M.about = e.target.value; };
+
+    /* ---------- People ---------- */
+    function renderPeople(){
+      const root = $('peopleBody'); root.innerHTML = '';
+      (M.groups||[]).forEach((g, gi) => {
+        const gt = document.createElement('div');
+        gt.innerHTML = `<div class="grp-title">${g.title} <button class="small" data-addm="${gi}">+ Add person</button></div>`;
+        root.appendChild(gt);
+        (g.members||[]).forEach((m, mi) => root.appendChild(memberCard(g, gi, m, mi)));
+      });
+      root.querySelectorAll('[data-addm]').forEach(b => b.onclick = () => {
+        const gi = +b.dataset.addm;
+        M.groups[gi].members.push({ name:'New Person', role:'', institution:'National University of Singapore', website:'', email:'', image:'', bio:'' });
+        renderPeople();
+      });
+    }
+    function field(label, val, oninput, textarea){
+      const wrap = document.createElement('div');
+      wrap.innerHTML = `<label>${label}</label>`;
+      const el = document.createElement(textarea?'textarea':'input');
+      el.value = val||''; el.oninput = e => oninput(e.target.value);
+      wrap.appendChild(el); return wrap;
+    }
+    function memberCard(g, gi, m, mi){
+      const c = document.createElement('div'); c.className='card';
+      const head = document.createElement('div'); head.className='card-head';
+      head.innerHTML = `<strong>${m.name||'(unnamed)'}</strong>`;
+      const del = document.createElement('button'); del.className='small danger'; del.textContent='Remove';
+      del.onclick = () => { if(confirm('Remove '+(m.name||'this person')+'?')){ g.members.splice(mi,1); renderPeople(); } };
+      head.appendChild(del); c.appendChild(head);
+
+      const r1 = document.createElement('div'); r1.className='row';
+      r1.append(field('Name', m.name, v=>{m.name=v; head.querySelector('strong').textContent=v||'(unnamed)';}),
+                field('Role', m.role, v=>m.role=v));
+      c.appendChild(r1);
+      const r2 = document.createElement('div'); r2.className='row';
+      r2.append(field('Institution', m.institution, v=>m.institution=v),
+                field('Email (optional)', m.email, v=>m.email=v));
+      c.appendChild(r2);
+      const r3 = document.createElement('div'); r3.className='row';
+      r3.append(field('Website URL', m.website, v=>m.website=v),
+                field('Photo file (assets/headshots/…)', m.image, v=>m.image=v));
+      c.appendChild(r3);
+      c.appendChild(field('Bio', m.bio, v=>m.bio=v, true));
+      return c;
+    }
+
+    /* ---------- Publications ---------- */
+    function renderPubs(){
+      const root = $('pubsList'); root.innerHTML='';
+      (M.publications||[]).forEach((p, i) => {
+        const c = document.createElement('div'); c.className='card';
+        const head = document.createElement('div'); head.className='card-head';
+        const fl = document.createElement('label'); fl.style.cssText='display:flex;align-items:center;gap:6px;margin:0;text-transform:none;font-size:.85rem;';
+        const cb = document.createElement('input'); cb.type='checkbox'; cb.checked=!!p.featured; cb.style.width='auto'; cb.onchange=e=>p.featured=e.target.checked;
+        fl.append(cb, document.createTextNode('Featured on Home'));
+        const del = document.createElement('button'); del.className='small danger'; del.textContent='Remove';
+        del.onclick=()=>{ M.publications.splice(i,1); renderPubs(); };
+        head.append(fl, del); c.appendChild(head);
+        c.appendChild(field('Citation (APA 7th)', p.citation, v=>p.citation=v, true));
+        c.appendChild(field('Link / DOI (optional)', p.url, v=>p.url=v));
+        root.appendChild(c);
+      });
+    }
+    $('addPub').onclick = () => { (M.publications=M.publications||[]).unshift({featured:false,citation:'',url:''}); renderPubs(); };
+
+    /* ---------- News ---------- */
+    function renderNews(){
+      const root = $('newsList'); root.innerHTML='';
+      (M.news||[]).forEach((n, i) => {
+        const c = document.createElement('div'); c.className='card';
+        const head = document.createElement('div'); head.className='card-head';
+        head.innerHTML = `<strong>${n.title||'(untitled)'}</strong>`;
+        const del = document.createElement('button'); del.className='small danger'; del.textContent='Remove';
+        del.onclick=()=>{ M.news.splice(i,1); renderNews(); };
+        head.appendChild(del); c.appendChild(head);
+        const r = document.createElement('div'); r.className='row';
+        r.append(field('Title', n.title, v=>{n.title=v; head.querySelector('strong').textContent=v||'(untitled)';}),
+                 field('Date (YYYY-MM-DD)', n.date, v=>n.date=v));
+        c.appendChild(r);
+        c.appendChild(field('ID (short, no spaces — used in the link)', n.id, v=>n.id=v));
+        c.appendChild(field('Summary (shown in the list)', n.summary, v=>n.summary=v, true));
+        c.appendChild(field('Full text (HTML allowed)', n.body, v=>n.body=v, true));
+        root.appendChild(c);
+      });
+    }
+    $('addNews').onclick = () => {
+      const today = new Date().toISOString().slice(0,10);
+      (M.news=M.news||[]).unshift({ id:'update-'+Date.now(), title:'New update', date:today, summary:'', body:'' });
+      renderNews();
+    };
+
+    /* ---------- Serialise & download ---------- */
+    function buildFile(){
+      const header =
+`/* =============================================================================
+   EARP LAB — SITE CONTENT  (generated by admin.html on ${new Date().toLocaleString('en-GB')})
+   Edit with admin.html, or carefully by hand. Then commit this file to GitHub.
+   ========================================================================== */
+
+window.SITE_DATA = `;
+      return header + JSON.stringify(M, null, 2) + ';\n';
+    }
+    $('download').onclick = () => {
+      const blob = new Blob([buildFile()], {type:'text/javascript'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = 'data.js'; a.click();
+      URL.revokeObjectURL(a.href);
+      toast('data.js downloaded — now upload it to GitHub to publish.');
+    };
+    $('preview').onclick = () => window.open('index.html','_blank');
+    $('reset').onclick = () => { if(confirm('Discard all changes since the page loaded?')){ M = clone(ORIGINAL); renderAll(); toast('Changes reset.'); } };
+
+    function renderAll(){ renderTop(); renderPeople(); renderPubs(); renderNews(); }
+    renderAll();
+  </script>
+</body>
+</html>

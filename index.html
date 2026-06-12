@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EARP Lab</title>
+  <meta name="description" content="EARP Lab — Experimental Bioethics, AI, and Relational Moral Psychology Lab, directed by Brian D. Earp at the National University of Singapore." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #f6f8fb;
+      --panel: rgba(255,255,255,0.82);
+      --panel-strong: rgba(255,255,255,0.96);
+      --text: #102033;
+      --muted: #5b6b7d;
+      --accent: #2c6bed;
+      --accent-2: #0ea5a8;
+      --line: rgba(16,32,51,0.10);
+      --shadow: 0 18px 50px rgba(16,32,51,0.10);
+      --radius: 22px;
+    }
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior: smooth; }
+    body{
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 12%, rgba(44,107,237,0.12), transparent 22%),
+        radial-gradient(circle at 88% 14%, rgba(14,165,168,0.12), transparent 20%),
+        radial-gradient(circle at 78% 88%, rgba(44,107,237,0.10), transparent 24%),
+        linear-gradient(180deg, #f9fbff 0%, #eef3f9 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.55;
+    }
+    body::before, body::after{
+      content:""; position: fixed; width: 420px; height: 420px;
+      border-radius: 50%; filter: blur(8px); pointer-events: none;
+      opacity: 0.26; z-index: 0;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(44,107,237,0.18), transparent 55%),
+        radial-gradient(circle at 70% 70%, rgba(14,165,168,0.14), transparent 50%);
+    }
+    body::before{ top: -120px; right: -140px; }
+    body::after{ bottom: -160px; left: -180px; }
+
+    .site{ position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; padding: 22px 20px 28px; }
+    a{ color: var(--accent); }
+
+    .page{ display: none; }
+    .page.active{ display: block; animation: fade .25s ease; }
+    @keyframes fade{ from{ opacity: 0; transform: translateY(4px);} to{ opacity:1; transform:none; } }
+
+    header.site-header{
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 20px; padding: 12px 6px 22px;
+    }
+    .brand{ display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; }
+    .brand img{ width: 52px; height: 52px; flex: none; }
+    .brand h1{ margin: 0; font-size: clamp(1.7rem, 3.4vw, 2.7rem); line-height: 1.02; letter-spacing: -0.03em; font-weight: 800; }
+    .brand .subtitle{ margin-top: 4px; font-size: 0.98rem; color: var(--muted); font-weight: 400; max-width: 620px; }
+
+    nav.top-nav{ display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .tab{
+      border: 1px solid rgba(16,32,51,0.08); background: rgba(255,255,255,0.72);
+      color: var(--text); padding: 9px 17px; border-radius: 999px; text-decoration: none;
+      font-size: 0.95rem; font-weight: 600; box-shadow: 0 8px 20px rgba(16,32,51,0.06);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease; cursor: pointer;
+    }
+    .tab:hover, .tab:focus-visible{ transform: translateY(-1px); border-color: rgba(44,107,237,0.35); background: rgba(255,255,255,0.96); outline: none; }
+    .tab.active{ background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; border-color: transparent; }
+
+    .hero-grid{ display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px; margin-top: 6px; }
+    .card{
+      background: var(--panel); backdrop-filter: blur(14px);
+      border: 1px solid rgba(16,32,51,0.08); box-shadow: var(--shadow);
+      border-radius: var(--radius); padding: 26px;
+    }
+    .card h2, .card h3{ margin: 0 0 14px; letter-spacing: -0.02em; }
+    .muted{ color: var(--muted); }
+
+    .theme-grid{ display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 14px; }
+    .theme{ padding: 18px 14px; border-radius: 18px; background: rgba(255,255,255,0.72); border: 1px solid rgba(16,32,51,0.07); text-align: center; min-height: 134px; }
+    .theme svg{ width: 32px; height: 32px; stroke: var(--accent); fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 10px; }
+    .theme p{ margin: 0; font-size: 0.92rem; line-height: 1.35; font-weight: 600; }
+
+    .split{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+    .pub-list, .news-list{ display: grid; gap: 12px; }
+    .pub-item, .news-item{ display: block; text-decoration: none; color: inherit; border: 1px solid rgba(16,32,51,0.08); border-radius: 16px; padding: 14px 16px; background: rgba(255,255,255,0.72); transition: transform .18s ease, border-color .18s ease, background .18s ease; }
+    .pub-item.link:hover, .news-item:hover{ transform: translateY(-2px); border-color: rgba(44,107,237,0.28); background: rgba(255,255,255,0.96); }
+    .news-item strong{ display: block; margin-bottom: 5px; }
+    .news-item .date{ color: var(--muted); font-size: 0.86rem; font-weight: 600; }
+    .news-item span.sum{ color: var(--muted); font-size: 0.94rem; display:block; margin-top: 3px; }
+
+    .page-title{ margin: 6px 0 6px; font-size: clamp(1.7rem, 3vw, 2.3rem); }
+    .group{ margin-top: 26px; }
+    .group > h2{ margin: 0 0 14px; font-size: 1.2rem; padding-bottom: 8px; border-bottom: 2px solid var(--line); }
+    .members{ display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+    .member{ border-radius: 18px; overflow: hidden; border: 1px solid rgba(16,32,51,0.08); background: rgba(255,255,255,0.82); box-shadow: 0 10px 30px rgba(16,32,51,0.07); align-self: start; }
+    .member-toggle{ width: 100%; border: 0; background: transparent; cursor: pointer; padding: 16px; text-align: left; display: grid; grid-template-columns: 64px 1fr; gap: 14px; align-items: center; color: inherit; font-family: inherit; }
+    .member-toggle:hover{ background: rgba(44,107,237,0.05); }
+    .avatar-wrap{ width: 64px; height: 64px; border-radius: 50%; flex: none; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; font-weight: 700; font-size: 1.1rem; overflow: hidden; border: 2px solid rgba(44,107,237,0.18); }
+    .avatar-wrap img{ width: 100%; height: 100%; object-fit: cover; }
+    .member-name{ margin: 0; font-size: 1.04rem; font-weight: 700; }
+    .member-role{ margin: 3px 0 0; font-size: 0.9rem; color: var(--muted); }
+    .chev{ position: relative; }
+    .member-details{ display: none; padding: 2px 16px 18px; font-size: 0.95rem; border-top: 1px solid rgba(16,32,51,0.08); background: rgba(255,255,255,0.55); }
+    .member.open .member-details{ display: block; }
+    .detail-row{ margin-top: 10px; }
+    .detail-row .lbl{ font-weight: 600; }
+    .detail-row a{ text-decoration: none; }
+    .detail-row a:hover{ text-decoration: underline; }
+    .member-bio{ margin-top: 10px; color: var(--text); }
+
+    .publication-list{ display: grid; gap: 14px; }
+    .apa-item{ background: rgba(255,255,255,0.80); border: 1px solid rgba(16,32,51,0.08); border-radius: 18px; padding: 16px 18px; line-height: 1.6; }
+    .apa-item a{ text-decoration: none; font-weight: 500; }
+    .apa-item a:hover{ text-decoration: underline; }
+
+    .news-detail{ max-width: 760px; }
+    .back-link{ display: inline-block; margin: 4px 0 16px; text-decoration: none; color: var(--accent); font-weight: 600; }
+    .news-detail .date{ color: var(--muted); font-weight: 600; font-size: 0.9rem; margin: 0 0 14px; }
+
+    footer.footer{ margin-top: 28px; padding: 18px 6px 6px; display: flex; justify-content: center; align-items: center; gap: 12px; color: var(--muted); font-size: 0.85rem; flex-wrap: wrap; }
+    .social{ width: 38px; height: 38px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.78); border: 1px solid rgba(16,32,51,0.08); box-shadow: 0 8px 18px rgba(16,32,51,0.06); text-decoration: none; color: var(--text); transition: transform .18s ease, color .18s ease; }
+    .social:hover{ transform: translateY(-2px); color: var(--accent); }
+    .social svg{ width: 17px; height: 17px; fill: currentColor; }
+    .copyright{ width: 100%; text-align: center; margin-top: 4px; }
+
+    @media (max-width: 920px){
+      header.site-header{ flex-direction: column; align-items: flex-start; }
+      nav.top-nav{ width: 100%; }
+      .hero-grid, .split{ grid-template-columns: 1fr; }
+      .theme-grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 540px){
+      .theme-grid{ grid-template-columns: 1fr 1fr; }
+      .card{ padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="EARP Lab home">
+        <img src="assets/logo-mark.svg" alt="" />
+        <div>
+          <h1 id="brandName">EARP Lab</h1>
+          <div class="subtitle" id="brandSub"></div>
+        </div>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a class="tab" href="#home" data-page="home">Home</a>
+        <a class="tab" href="#people" data-page="people">People</a>
+        <a class="tab" href="#publications" data-page="publications">Publications</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="page">
+        <div class="hero-grid">
+          <article class="card">
+            <h2>About the lab</h2>
+            <p class="muted" id="aboutText"></p>
+          </article>
+          <article class="card">
+            <h2>Research themes</h2>
+            <div class="theme-grid" id="themeGrid"></div>
+          </article>
+        </div>
+        <div class="split">
+          <article class="card">
+            <h2>Representative publications</h2>
+            <div class="pub-list" id="featuredPubs"></div>
+          </article>
+          <article class="card">
+            <h2>Recent updates</h2>
+            <div class="news-list" id="newsList"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="people" class="page">
+        <div class="card">
+          <h2 class="page-title">People</h2>
+          <p class="muted">Select any name or photo to expand member details.</p>
+          <div id="peopleGroups"></div>
+        </div>
+      </section>
+
+      <section id="publications" class="page">
+        <div class="card">
+          <h2 class="page-title">Publications</h2>
+          <div class="publication-list" id="allPubs"></div>
+        </div>
+      </section>
+
+      <section id="news" class="page">
+        <div class="card news-detail">
+          <a class="back-link" href="#home">← Back to Home</a>
+          <div id="newsDetail"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div id="socialLinks" style="display:flex; gap:12px;"></div>
+      <div class="copyright">© <span id="year"></span> EARP Lab · Centre for Biomedical Ethics, National University of Singapore</div>
+    </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    const D = window.SITE_DATA || {};
+
+    /* ---- icon libraries ---- */
+    const THEME_ICONS = {
+      balance: '<svg viewBox="0 0 24 24"><path d="M12 3v18M6 21h12M12 6l-7 2 3 6a3 3 0 0 0 6 0l-3-6m4 0 3 6a3 3 0 0 1-6 0"/></svg>',
+      chip:    '<svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 9h6v6H9zM9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>',
+      relations:'<svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="7" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M7.6 7.7 11 16M16.6 8.7 13 16M8 6.5h8"/></svg>',
+      brain:   '<svg viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8V15a3 3 0 0 0 4 2.8M15 4a3 3 0 0 1 3 3 3 3 0 0 1 1 5.8V15a3 3 0 0 1-4 2.8M9 4a2.5 2.5 0 0 1 3 0M9 17.8a2.5 2.5 0 0 0 3 0M12 4v14"/></svg>',
+      spark:   '<svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/><circle cx="12" cy="12" r="2.6"/></svg>',
+      book:    '<svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19a2 2 0 0 0 2 2h13"/></svg>'
+    };
+    const SOCIAL_ICONS = {
+      website:'<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 0c2.5 2.5 3.5 6 3.5 10S14.5 19.5 12 22M12 2C9.5 4.5 8.5 8 8.5 12s1 7.5 3.5 10M2.5 9h19M2.5 15h19"/></svg>',
+      email:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 013.5 4h17A1.5 1.5 0 0122 5.5v13A1.5 1.5 0 0120.5 20h-17A1.5 1.5 0 012 18.5zM4 7l8 5 8-5"/></svg>',
+      github:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.3-1.2-3.3-1.2-.4-1-.9-1.3-.9-1.3-.8-.6.1-.6.1-.6.9.1 1.4.9 1.4.9.8 1.4 2.1 1 2.7.8.1-.6.3-1 .6-1.3-2.2-.2-4.6-1.1-4.6-5a3.9 3.9 0 011-2.8 3.6 3.6 0 01.1-2.7s.9-.3 3 .9a10.6 10.6 0 015.5 0c2.1-1.2 3-.9 3-.9.6 1.6.2 2.5.1 2.7a3.9 3.9 0 011 2.8c0 4-2.4 4.8-4.6 5 .4.4.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>',
+      bluesky:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8C10.9 8.5 7.9 4.6 5 3 3 1.9 2 2.5 2 5.3c0 1.1.6 6.6 1 7.5.5 1.4 1.9 1.8 3.2 1.6-2.3.4-2.9 1.9-1.6 3.4 2.4 2.8 3.5-.7 3.8-1.6.1-.3.2-.5.6-.5s.5.2.6.5c.3.9 1.4 4.4 3.8 1.6 1.3-1.5.7-3-1.6-3.4 1.3.2 2.7-.2 3.2-1.6.4-.9 1-6.4 1-7.5 0-2.8-1-3.4-3-2.3-2.9 1.6-5.9 5.5-7 7.8z"/></svg>',
+      twitter:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.9 7.9L23 22h-6.9l-5.4-6.9L4.6 22H1.5l7.4-8.5L1 2h7l4.9 6.4zm-1.2 18h1.7L7.1 3.9H5.3z"/></svg>',
+      linkedin:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 6.5A2.5 2.5 0 116.5 1a2.5 2.5 0 010 5.5zM2 23V8h4.9v15zm7.5 0V8h4.7v2.1c.7-1.2 2.3-2.5 4.7-2.5 3.5 0 4.6 2.1 4.6 5.6V23h-4.9v-7c0-1.7-.6-2.9-2.1-2.9-1.2 0-1.8.8-2.1 1.6-.1.3-.1.7-.1 1V23z"/></svg>',
+      scholar:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 8l11 6 9-4.9V16h2V8zM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8z"/></svg>'
+    };
+
+    const esc = s => String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const initials = n => (n||'').split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+    const fmtDate = iso => { const d = new Date(iso); return isNaN(d) ? iso : d.toLocaleDateString('en-GB',{year:'numeric',month:'long',day:'numeric'}); };
+
+    /* ---- render header / about / themes ---- */
+    document.getElementById('brandName').textContent = D.lab?.name || 'EARP Lab';
+    document.getElementById('brandSub').textContent = D.lab?.subtitle || '';
+    document.title = (D.lab?.name || 'EARP Lab');
+    document.getElementById('aboutText').textContent = D.about || '';
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('themeGrid').innerHTML = (D.themes||[]).map(t =>
+      `<div class="theme">${THEME_ICONS[t.icon]||THEME_ICONS.spark}<p>${esc(t.label)}</p></div>`
+    ).join('');
+
+    /* ---- featured publications (home) ---- */
+    const featured = (D.publications||[]).filter(p => p.featured);
+    document.getElementById('featuredPubs').innerHTML = (featured.length?featured:(D.publications||[]).slice(0,3)).map(p =>
+      pubMarkup(p)
+    ).join('') || '<p class="muted">No publications yet.</p>';
+
+    /* ---- all publications ---- */
+    document.getElementById('allPubs').innerHTML = (D.publications||[]).map(p =>
+      `<div class="apa-item">${p.citation}${p.url?` <a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.url)}</a>`:''}</div>`
+    ).join('') || '<p class="muted">No publications yet.</p>';
+
+    function pubMarkup(p){
+      const inner = `${p.citation}`;
+      return p.url
+        ? `<a class="pub-item link" href="${esc(p.url)}" target="_blank" rel="noopener">${inner}</a>`
+        : `<div class="pub-item">${inner}</div>`;
+    }
+
+    /* ---- news list (home) ---- */
+    document.getElementById('newsList').innerHTML = (D.news||[]).map(n =>
+      `<a class="news-item" href="#news/${esc(n.id)}">
+         <strong>${esc(n.title)}</strong>
+         <span class="date">${esc(fmtDate(n.date))}</span>
+         <span class="sum">${esc(n.summary||'')}</span>
+       </a>`
+    ).join('') || '<p class="muted">No updates yet.</p>';
+
+    /* ---- people ---- */
+    document.getElementById('peopleGroups').innerHTML = (D.groups||[]).map(g => `
+      <div class="group">
+        <h2>${esc(g.title)}</h2>
+        <div class="members">
+          ${(g.members||[]).map(m => memberCard(m)).join('')}
+        </div>
+      </div>`
+    ).join('');
+
+    function memberCard(m){
+      const av = m.image
+        ? `<span class="avatar-wrap"><img src="${esc(m.image)}" alt="${esc(m.name)}" onerror="this.replaceWith(Object.assign(document.createTextNode('${esc(initials(m.name))}')))"></span>`
+        : `<span class="avatar-wrap">${esc(initials(m.name))}</span>`;
+      const rows = [];
+      if(m.institution) rows.push(`<div class="detail-row"><span class="lbl">Institution:</span> ${esc(m.institution)}</div>`);
+      if(m.email) rows.push(`<div class="detail-row"><span class="lbl">Email:</span> <a href="mailto:${esc(m.email)}">${esc(m.email)}</a></div>`);
+      if(m.website) rows.push(`<div class="detail-row"><span class="lbl">Website:</span> <a href="${esc(m.website)}" target="_blank" rel="noopener">${esc(m.website.replace(/^https?:\/\//,'').replace(/\/$/,''))}</a></div>`);
+      if(m.bio) rows.push(`<div class="member-bio">${esc(m.bio)}</div>`);
+      return `<div class="member">
+        <button class="member-toggle" type="button" aria-expanded="false">
+          ${av}
+          <div>
+            <p class="member-name">${esc(m.name)}</p>
+            <p class="member-role">${esc(m.role||'')}</p>
+          </div>
+        </button>
+        <div class="member-details">${rows.join('')}</div>
+      </div>`;
+    }
+
+    /* ---- social footer ---- */
+    document.getElementById('socialLinks').innerHTML = (D.social||[]).map(s =>
+      `<a class="social" href="${esc(s.url)}" target="_blank" rel="noopener" aria-label="${esc(s.label||s.icon)}" title="${esc(s.label||s.icon)}">${SOCIAL_ICONS[s.icon]||SOCIAL_ICONS.website}</a>`
+    ).join('');
+
+    /* ---- member expand/collapse ---- */
+    document.addEventListener('click', e => {
+      const btn = e.target.closest('.member-toggle');
+      if(!btn) return;
+      const member = btn.closest('.member');
+      const open = member.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    /* ---- routing ---- */
+    const pages = ['home','people','publications'];
+    function show(page){
+      document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === page));
+      document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.page === page));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function renderNews(id){
+      const n = (D.news||[]).find(x => x.id === id);
+      document.getElementById('newsDetail').innerHTML = n
+        ? `<h2>${esc(n.title)}</h2><p class="date">${esc(fmtDate(n.date))}</p>${n.body||('<p>'+esc(n.summary||'')+'</p>')}`
+        : '<h2>Update not found</h2>';
+    }
+    function route(){
+      const hash = location.hash.replace(/^#/,'');
+      if(hash.startsWith('news/')){
+        renderNews(hash.slice(5));
+        document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === 'news'));
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      show(pages.includes(hash) ? hash : 'home');
+    }
+    window.addEventListener('hashchange', route);
+    route();
+  </script>
+</body>
+</html>
