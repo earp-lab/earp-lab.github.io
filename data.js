@@ -270,7 +270,7 @@ window.SITE_DATA = {
     {featured: true,
       citation: `Gordon, E. C., Cheung, K., Savulescu, J., & Earp, B. D. (2025). 
       Moral enhancement and cheapened achievement: Psychedelics, virtual reality and AI.
-      <em>Bioethics</em>, <em>39</em>(3), 276–287.`,
+      <em>Bioethics</em>, <em>39</em>(3), 276–287.<br>`,
       url: "https://doi.org/10.1111/bioe.13374"
     },
      
@@ -284,14 +284,14 @@ window.SITE_DATA = {
     {featured: true,
       citation: `Calcott, R., & Earp, B. D. (2025). 
       Relational moral philosophy needs relational moral psychology: A relational moral theory: African ethics in and beyond the continent. 
-      <em>Philosophical Psychology</em>, <em>38</em>(6), 2993-3001.`,
+      <em>Philosophical Psychology</em>, <em>38</em>(6), 2993-3001.<br>`,
       url: "https://doi.org/10.1080/09515089.2024.2304054"
     },
      
     {featured: false,
       citation: `The Brussels Collaboration on Bodily Integrity. (2025). 
       Genital modifications in prepubescent minors: When may clinicians ethically proceed? 
-      <em>The American Journal of Bioethics</em>, <em>25</em>(7), 53-102.`,
+      <em>The American Journal of Bioethics</em>, <em>25</em>(7), 53-102.<br>`,
       url: "https://doi.org/10.1080/15265161.2024.2353823"
     }
   ],
