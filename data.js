@@ -8,7 +8,7 @@
      • Keep the quotation marks " " and backticks ` ` exactly where they are.
      • Separate each entry with a comma.
      • For bios and citations you may use backticks ` ` (they allow apostrophes).
-     • To italicise a journal name, wrap it like this: <em>Journal Name</em>
+     • To italicise a journal name, wrap it like this: <em>Journal</em>, <em>Vol</em>Issue,
      • Headshots live in  assets/headshots/  — add the file, then point to it.
 
    Prefer not to touch the file directly? Open  admin.html  in your browser,
@@ -264,26 +264,34 @@ window.SITE_DATA = {
   ],
 
   /* ---- Publications ---------------------------------------------------- */
-  /* APA 7th. Set featured:true to also show it on the Home page.           */
+  /* APA 7th. Set featured: true to also show it on the Home page.           */
   /* To add one: copy a block, paste your APA citation, add the URL.        */
   publications: [
     {featured: true,
-      citation: `Gordon, E. C., Cheung, V., Earp, B. D., &amp; Savulescu, J. (2025). Moral enhancement and cheapened achievement: Psychedelics, virtual reality and AI. <em>Bioethics, 39</em>(3), 276–287.`,
-      url: "https://doi.org/10.1111/bioe.13369"
+      citation: `Gordon, E. C., Cheung, K., Savulescu, J., & Earp, B. D. (2025). 
+      Moral enhancement and cheapened achievement: Psychedelics, virtual reality and AI.
+      <em>Bioethics</em>, <em>39</em>(3), 276–287.`,
+      url: "https://doi.org/10.1111/bioe.13374"
     },
      
     {featured: true,
-      citation: `Toomey, J., Lewis, J., Hannikainen, I. R., &amp; Earp, B. D. (2024). The true self and decision-making capacity. <em>The American Journal of Bioethics, 24</em>(8), 86–88.`,
-      url: "https://doi.org/10.1080/15265161.2024.2371118"
+      citation: `Toomey, J., Lewis, J., Hannikainen, I. R., & Earp, B. D. (2024). 
+      The true self and decision-making capacity. 
+      <em>The American Journal of Bioethics</em>, <em>24</em>(8), 86–88.`,
+      url: "https://doi.org/10.1080/15265161.2024.2361894"
     },
      
     {featured: true,
-      citation: `Calcott, R., &amp; Earp, B. D. (in press). Relational moral philosophy needs relational moral psychology. <em>Philosophical Psychology</em>.`,
-      url: ""
+      citation: `Calcott, R., & Earp, B. D. (2025). 
+      Relational moral philosophy needs relational moral psychology: A relational moral theory: African ethics in and beyond the continent. 
+      <em>Philosophical Psychology</em>, <em>38</em>(6), 2993-3001.`,
+      url: "https://doi.org/10.1080/09515089.2024.2304054"
     },
      
     {featured: false,
-      citation: `The Brussels Collaboration on Bodily Integrity. (2024). Genital modifications in prepubescent minors: When may clinicians ethically proceed? <em>The American Journal of Bioethics, 24</em>(8), 21–47.`,
+      citation: `The Brussels Collaboration on Bodily Integrity. (2025). 
+      Genital modifications in prepubescent minors: When may clinicians ethically proceed? 
+      <em>The American Journal of Bioethics</em>, <em>25</em>(7), 53-102.`,
       url: "https://doi.org/10.1080/15265161.2024.2353823"
     }
   ],
