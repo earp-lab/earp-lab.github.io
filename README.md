@@ -1,6 +1,6 @@
 # EARP Lab website
 
-A single-page static website for the EARP Lab. All content lives in one file, `data.js`, so updating the site never requires touching the page layout or any code. The site is pure static HTML/CSS/JS: no build step, no Jekyll, no server.
+A single-page static website for the EARP Lab. All content lives in one file, `data.js`, so updating the site does not require touching the page layout or any code. The site is pure static HTML/CSS/JS: no build step, no Jekyll, no server.
 
 ## Files
 
@@ -16,28 +16,30 @@ A single-page static website for the EARP Lab. All content lives in one file, `d
 
 ## Three ways to update the site
 
-**1. Edit `data.js` directly on GitHub (Yuxin, or anyone).** Minor coding needed. All instructions can be found in `data.js`.
+### 1. Edit `data.js` directly on GitHub (Yuxin, or anyone).
+Minor coding needed. All instructions can be found in `data.js`.
 
-**2. Hand it to Claude (Brian).** Drop the new publication, person, or update into a chat and ask Claude to edit `data.js`. Claude commits the change.
+#### Adding a person's photo
+- Add image files in `assets/headshots/` (square photos look best). See existing headshots for naming convention.
+- In `data.js`, set "image:" to the link to that image `assets/headshots/yourfile.jpg`.
+- If a photo is missing or fails to load, the site shows the person's initials instead.
 
-**3. Use the editor (Yuxin, or anyone).** No coding needed:
+#### Adding a publication
+- Add paper pdf files in `publications/`. See existing pdfs for naming convention. 
+- In `data.js`, paste the citation in APA 7th format after "citation:" (to italicise a journal title or volumn number, wrap it in `<em>…</em>`).
+- Set "featured:" to true to also show it on the Home page.
+- Set "pdf:" to the link to that pdf `publications/yourfile.pdf`.
 
+### 2. Hand it to Claude (Brian).
+Drop the new publication, person, or update into a chat and ask Claude to edit `data.js`. Claude commits the change.
+
+### 3. Use the editor (Yuxin, or anyone).
+No coding needed:
 1. Open `admin.html` in a web browser (double-click the file, or open it from
    the live site at `/admin.html`).
 2. Add or edit people, publications, and news using the forms.
 3. Click **Download data.js**.
 4. On GitHub, open the repository, click `data.js`, click the pencil/upload, and replace it with the file you just downloaded. Commit. The site updates in a minute or two.
-
-### Adding a person's photo
-- Add image files in `assets/headshots/` (square photos look best). See existing headshots for naming convention.
-- In `data.js`, set "image:" to the link to that image `assets/headshots/yourfile.jpg`.
-- If a photo is missing or fails to load, the site shows the person's initials instead.
-
-### Adding a publication
-- Add paper pdf files in `publications/`. See existing pdfs for naming convention. 
-- In `data.js`, paste the citation in APA 7th format after "citation:" (to italicise a journal title or volumn number, wrap it in `<em>…</em>`).
-- Set "featured:" to true to also show it on the Home page.
-- Set "pdf:" to the link to that pdf `publications/yourfile.pdf`.
 
 ## Hosting at a custom domain (e.g. earplab.org)
 
