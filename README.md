@@ -12,7 +12,7 @@ code. The site is pure static HTML/CSS/JS: no build step, no Jekyll, no server.
 | `data.js` | **All editable content** — people, publications, news, themes, about text. |
 | `admin.html` | A form-based editor. Edit content in your browser, then download an updated `data.js`. |
 | `assets/headshots/` | Member photos. |
-| `assets/logo-mark.svg` | The lab logo (also used as the favicon). |
+| `assets/EARP_logo_small.jpg` | The lab logo (also used as the favicon). |
 | `CNAME` | The custom domain. Edit this to match the domain you register. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as-is. |
 
