@@ -8,20 +8,23 @@ code. The site is pure static HTML/CSS/JS: no build step, no Jekyll, no server.
 
 | File | What it is |
 |---|---|
-| `index.html` | The whole website. You should rarely need to edit this. |
 | `data.js` | **All editable content** — people, publications, news, themes, about text. |
+| `index.html` | The whole website setup. You should rarely need to edit this. |
 | `admin.html` | A form-based editor. Edit content in your browser, then download an updated `data.js`. |
-| `assets/headshots/` | Member photos. |
+| `assets/headshots/` | Lab member profile photos. |
 | `assets/EARP_logo_small.jpg` | The lab logo (also used as the favicon). |
-| `CNAME` | The custom domain. Edit this to match the domain you register. |
+| `CNAME` | The custom domain: earplab.org |
 | `.nojekyll` | Tells GitHub Pages to serve the files as-is. |
 
-## Two ways to update the site
+## Three ways to update the site
 
-**1. Hand it to Claude (Brian).** Drop the new publication, person, or update
+**1. Edit `data.js` directly on GitHub (Yuxin, or anyone).** Minor coding needed.
+All instructions can be found in `data.js`.
+
+**2. Hand it to Claude (Brian).** Drop the new publication, person, or update
 into a chat and ask Claude to edit `data.js`. Claude commits the change.
 
-**2. Use the editor (Yuxin, or anyone).** No coding needed:
+**3. Use the editor (Yuxin, or anyone).** No coding needed:
 
 1. Open `admin.html` in a web browser (double-click the file, or open it from
    the live site at `/admin.html`).
