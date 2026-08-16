@@ -274,7 +274,7 @@
   `<div class="apa-item">
     ${p.citation}
     ${p.pdf ? `<a class="doi" href="${esc(p.pdf)}" target="_blank" rel="noopener">[pdf]</a>` : ''}
-    ${p.url ? `<a class="doi" href="${esc(p.url)}" target="_blank" rel="noopener">DOI</a>` : ''}
+    ${p.url ? `<a class="doi" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.url)}</a>` : ''}
   </div>`
 ).join('') || '<p class="muted">No publications yet.</p>';
 
