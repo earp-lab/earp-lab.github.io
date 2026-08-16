@@ -262,14 +262,21 @@
 
     const featured = (D.publications||[]).filter(p=>p.featured);
     const featList = featured.length?featured:(D.publications||[]).slice(0,3);
-    document.getElementById('featuredPubs').innerHTML = featList.map(p=>
-      p.url ? `<div class="pub-row"><a href="${esc(p.url)}" target="_blank" rel="noopener">${p.citation}</a></div>`
-            : `<div class="pub-row">${p.citation}</div>`
-    ).join('') || '<p class="muted">No publications yet.</p>';
+    document.getElementById('featuredPubs').innerHTML = featList.map(p =>
+  `<div class="pub-row">
+    ${p.citation}
+    ${p.pdf ? `<a class="doi" href="${esc(p.pdf)}" target="_blank" rel="noopener">[pdf]</a>` : ''}
+    ${p.url ? `<a class="doi" href="${esc(p.url)}" target="_blank" rel="noopener">DOI</a>` : ''}
+  </div>`
+).join('') || '<p class="muted">No publications yet.</p>';
 
-    document.getElementById('allPubs').innerHTML = (D.publications||[]).map(p=>
-      `<div class="apa-item">${p.citation}${p.url?`<a class="doi" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.url)}</a>`:''}</div>`
-    ).join('') || '<p class="muted">No publications yet.</p>';
+    document.getElementById('allPubs').innerHTML = (D.publications||[]).map(p =>
+  `<div class="apa-item">
+    ${p.citation}
+    ${p.pdf ? `<a class="doi" href="${esc(p.pdf)}" target="_blank" rel="noopener">[pdf]</a>` : ''}
+    ${p.url ? `<a class="doi" href="${esc(p.url)}" target="_blank" rel="noopener">DOI</a>` : ''}
+  </div>`
+).join('') || '<p class="muted">No publications yet.</p>';
 
     document.getElementById('newsList').innerHTML = (D.news||[]).map(n=>
       `<a class="news-row" href="#news/${esc(n.id)}">
