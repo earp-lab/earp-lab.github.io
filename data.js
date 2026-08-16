@@ -364,10 +364,9 @@ window.SITE_DATA = {
     {featured: true,
       citation: `Toomey, J., Lewis, J., Hannikainen, I. R., & Earp, B. D. (2024). 
       The true self and decision-making capacity. 
-      <em>The American Journal of Bioethics</em>, <em>24</em>(8), 86–88.
-      [[pdf]](publications/ToomeyJ_LewisJ_HannikainenIR_et_al_2024.pdf)
-      <br>`,
-      url: "https://doi.org/10.1080/15265161.2024.2361894"
+      <em>The American Journal of Bioethics</em>, <em>24</em>(8), 86–88.<br>`,
+      url: "https://doi.org/10.1080/15265161.2024.2361894", 
+      pdf: "publications/ToomeyJ_LewisJ_HannikainenIR_et_al_2024.pdf"
     },
      
     {featured: true,
