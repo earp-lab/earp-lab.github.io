@@ -163,12 +163,42 @@
         const del = document.createElement('button'); del.className='small danger'; del.textContent='Remove';
         del.onclick=()=>{ M.publications.splice(i,1); renderPubs(); };
         head.append(fl, del); c.appendChild(head);
+        const catWrap = document.createElement('div');
+        catWrap.innerHTML = `<label>Research category</label>`;
+        const cat = document.createElement('select');  
+        ["Experimental Bioethics",
+          "Neuroethics",
+          "Relational Moral Psychology",
+          "AI Ethics",
+          "Psychology of Technology & AI"
+        ].forEach(name => {
+          const opt = document.createElement('option');
+          opt.value = name;
+          opt.textContent = name;
+          if ((p.category || "Other") === name) opt.selected = true;
+          cat.appendChild(opt);
+        });
+        
+        cat.onchange = e => p.category = e.target.value;
+        
+        catWrap.appendChild(cat);
+        c.appendChild(catWrap);
         c.appendChild(field('Citation (APA 7th)', p.citation, v=>p.citation=v, true));
         c.appendChild(field('Link / DOI (optional)', p.url, v=>p.url=v));
+        c.appendChild(field('PDF file (publications/…)', p.pdf, v=>p.pdf=v));
         root.appendChild(c);
       });
     }
-    $('addPub').onclick = () => { (M.publications=M.publications||[]).unshift({featured:false,citation:'',url:''}); renderPubs(); };
+    $('addPub').onclick = () => {
+      (M.publications=M.publications||[]).unshift({
+        featured:false,
+        category:'Other',
+        citation:'',
+        url:'',
+        pdf:''
+      });
+      renderPubs();
+    };
 
     /* ---------- News ---------- */
     function renderNews(){
