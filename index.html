@@ -297,15 +297,14 @@
   "Experimental Bioethics",
   "Neuroethics",
   "Relational Moral Psychology",
-  "Psychology of Technology"
-  "AI Ethics",
-  "Other"
+  "Psychology of Technology",
+  "AI Ethics"
 ];
 
 const pubs = D.publications || [];
 
 document.getElementById('allPubs').innerHTML = PUB_CATEGORIES.map(category => {
-  const categoryPubs = pubs.filter(p => (p.category || "Other") === category);
+  const categoryPubs = pubs.filter(p => p.category === category);
 
   if (!categoryPubs.length) return '';
 
