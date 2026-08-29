@@ -114,11 +114,36 @@
     .detail-row a{ overflow-wrap:anywhere; word-break:break-word; }
     .member-bio{ margin-top:12px; color:var(--body); line-height:1.6; }
 
-    /* ---- publications page ---- */
-    .pubs-full{ max-width:960px; }
-    .apa-item{ padding:20px 0; border-top:1px solid var(--line); line-height:1.62; color:var(--body); }
-    .apa-item:first-child{ border-top:0; }
-    .apa-item .doi{ display:inline-block; margin-top:4px; font-size:0.88rem; }
+/* ---- publications page ---- */
+.pubs-full{ max-width:960px; }
+
+.pub-category{
+  margin-bottom:48px;
+}
+
+.pub-category-title{
+  font-size:1.35rem;
+  margin:0;
+  padding:0 0 12px;
+  border-bottom:1px solid var(--line-strong);
+}
+
+.apa-item{
+  padding:20px 0;
+  border-top:1px solid var(--line);
+  line-height:1.62;
+  color:var(--body);
+}
+
+.pub-category .apa-item:first-of-type{
+  border-top:0;
+}
+
+.apa-item .doi{
+  display:inline-block;
+  margin-top:4px;
+  font-size:0.88rem;
+}
 
     /* ---- news detail ---- */
     .news-detail{ max-width:720px; }
