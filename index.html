@@ -188,6 +188,7 @@
         <a class="tab" href="#home" data-page="home">Home</a>
         <a class="tab" href="#people" data-page="people">People</a>
         <a class="tab" href="#publications" data-page="publications">Publications</a>
+        <a class="tab" href="#news" data-page="news">News</a>
       </nav>
     </div>
   </header>
@@ -233,12 +234,25 @@
         <div class="pubs-full" id="allPubs"></div>
       </section>
 
-      <section id="news" class="page">
-        <div class="news-detail">
-          <a class="back-link" href="#home">← Back</a>
-          <div id="newsDetail"></div>
-        </div>
-      </section>
+          <section id="news" class="page">
+    
+      <p class="eyebrow">Updates</p>
+      <h2 class="section-title">News</h2>
+    
+      <div class="news-list" id="allNews"></div>
+    
+    </section>
+    
+    <section id="news-detail" class="page">
+    
+      <div class="news-detail">
+        <a class="back-link" href="#news">← Back to News</a>
+    
+        <div id="newsDetail"></div>
+    
+      </div>
+    
+    </section>
     </div>
   </main>
 
@@ -322,13 +336,29 @@ document.getElementById('allPubs').innerHTML = PUB_CATEGORIES.map(category => {
   `;
 }).join('') || '<p class="muted">No publications yet.</p>';
 
-    document.getElementById('newsList').innerHTML = (D.news||[]).map(n=>
-      `<a class="news-row" href="#news/${esc(n.id)}">
-         <span class="t">${esc(n.title)}</span>
-         <span class="d">${esc(fmtDate(n.date))}</span>
-         <span class="s">${esc(n.summary||'')}</span>
-       </a>`
-    ).join('') || '<p class="muted">No updates yet.</p>';
+    const news = (D.news || [])
+  .slice()
+  .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+document.getElementById('newsList').innerHTML = news.slice(0, 3).map(n =>
+
+`<a class="news-row" href="#news/${esc(n.id)}">
+<span class="t">${esc(n.title)}</span>
+<span class="d">${esc(fmtDate(n.date))}</span>
+<span class="s">${esc(n.summary||'')}</span>
+</a>`
+
+).join('') || '<p class="muted">No updates yet.</p>';
+
+    document.getElementById('allNews').innerHTML = news.map(n =>
+
+`<a class="news-row" href="#news/${esc(n.id)}">
+<span class="t">${esc(n.title)}</span>
+<span class="d">${esc(fmtDate(n.date))}</span>
+<span class="s">${esc(n.summary||'')}</span>
+</a>`
+
+).join('') || '<p class="muted">No updates yet.</p>';
 
     document.getElementById('peopleGroups').innerHTML = (D.groups||[]).map(g=>`
       <div class="group">
@@ -367,7 +397,7 @@ document.getElementById('allPubs').innerHTML = PUB_CATEGORIES.map(category => {
       btn.setAttribute('aria-expanded',open?'true':'false');
     });
 
-    const pages=['home','people','publications'];
+    const pages=['home','people','publications','news'];
     function show(p){
       document.querySelectorAll('.page').forEach(s=>s.classList.toggle('active',s.id===p));
       document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.page===p));
@@ -383,7 +413,7 @@ document.getElementById('allPubs').innerHTML = PUB_CATEGORIES.map(category => {
       const h=location.hash.replace(/^#/,'');
       if(h.startsWith('news/')){
         renderNews(h.slice(5));
-        document.querySelectorAll('.page').forEach(s=>s.classList.toggle('active',s.id==='news'));
+        document.querySelectorAll('.page').forEach(s=>s.classList.toggle('active',s.id==='news-detail'));
         document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
         window.scrollTo({top:0,behavior:'smooth'}); return;
       }
