@@ -429,14 +429,8 @@ window.SITE_DATA = {
       date: "2026-06-12",
       summary: "Our new lab website is live. Explore our people, research themes, and publications.",
       body: `<p>Welcome to the new home of the EARP Lab. The site brings together our people, research themes, and publications in one place, and will be updated regularly with news, new work, and opportunities to join us.</p>`
-    },
-     
-    {id: "moral-enhancement-paper",
-      title: "New paper: Moral enhancement and cheapened achievement",
-      date: "2025-04-01",
-      summary: "Gordon, Cheung, Earp, and Savulescu ask whether psychedelics, VR, and AI cheapen moral achievement.",
-      body: `<p>Our new paper in <em>Bioethics</em> examines whether moral improvement brought about by psychedelics, virtual reality, or AI counts as a genuine achievement, and what that means for debates about moral enhancement.</p><p>Read it at <a href="https://doi.org/10.1111/bioe.13369" target="_blank" rel="noopener">doi.org/10.1111/bioe.13369</a>.</p>`
     }
+     
   ],
 
   /* ---- Footer social / contact links ----------------------------------- */
