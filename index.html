@@ -268,13 +268,35 @@
     : `<div class="pub-row">${p.citation}</div>`
 ).join('') || '<p class="muted">No publications yet.</p>';
 
-    document.getElementById('allPubs').innerHTML = (D.publications||[]).map(p =>
-  `<div class="apa-item">
-    ${p.pdf ? ` <a class="doi" href="${esc(p.pdf)}" target="_blank" rel="noopener">[pdf]</a>` : ''}
-    ${p.citation}
-    ${p.url ? `<br><a class="doi" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.url)}</a>` : ''}
-  </div>`
-).join('') || '<p class="muted">No publications yet.</p>';
+    const PUB_CATEGORIES = [
+  "Experimental Bioethics",
+  "Neuroethics",
+  "Relational Moral Psychology",
+  "Psychology of Technology"
+  "AI Ethics",
+  "Other"
+];
+
+const pubs = D.publications || [];
+
+document.getElementById('allPubs').innerHTML = PUB_CATEGORIES.map(category => {
+  const categoryPubs = pubs.filter(p => (p.category || "Other") === category);
+
+  if (!categoryPubs.length) return '';
+
+  return `
+    <section class="pub-category">
+      <h3 class="pub-category-title">${esc(category)}</h3>
+      ${categoryPubs.map(p => `
+        <div class="apa-item">
+          ${p.pdf ? `<a class="doi" href="${esc(p.pdf)}" target="_blank" rel="noopener">[pdf]</a>` : ''}
+          ${p.citation}
+          ${p.url ? `<br><a class="doi" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.url)}</a>` : ''}
+        </div>
+      `).join('')}
+    </section>
+  `;
+}).join('') || '<p class="muted">No publications yet.</p>';
 
     document.getElementById('newsList').innerHTML = (D.news||[]).map(n=>
       `<a class="news-row" href="#news/${esc(n.id)}">
