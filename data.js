@@ -354,33 +354,71 @@ window.SITE_DATA = {
   /* APA 7th. Set featured: true to also show it on the Home page.                                              */
   /* To add one: copy a {...} block, paste your APA citation, add the URL, add pdf link to publication folder.  */
   publications: [
-    {featured: true,
+
+     {featured: true,
+     category: "AI Ethics",
+      citation: `Voinea, C., Mann, S. P., Savulescu, J., & Earp, B. D. (2026). 
+      The calculator analogy: Epistemic virtues for using LLMs.
+      <em>Technology in Society</em>, <em>85</em>, 103198.`,
+     url: "https://doi.org/10.1016/j.techsoc.2025.103198",
+     pdf: "publications/Voinea et al. (2026) LLM calculator analogy.pdf"
+    },
+     
+{featured: true,
+     category: "Psychology of Technology & AI",
+      citation: `Khan, M. A., Mikalonytė, E. S., Mann, S. P., Liu, P., Chu, Y., Attie-Picker, M., Buyukbabani, M. B., Savulescu, J., Hannikainen, I. R., & Earp, B. D. (2026). 
+      Personalizing AI art boosts credit, not beauty.
+      <em>Technology in Society</em>, <em>84</em>, 103055.`,
+     url: "https://doi.org/10.1016/j.techsoc.2025.103055",
+     pdf: "publications/Khan et al. (2026) AI art.pdf"
+    },
+
+     {featured: true,
      category: "Neuroethics",
       citation: `Gordon, E. C., Cheung, K., Savulescu, J., & Earp, B. D. (2025). 
       Moral enhancement and cheapened achievement: Psychedelics, virtual reality and AI.
       <em>Bioethics</em>, <em>39</em>(3), 276–287.`,
      url: "https://doi.org/10.1111/bioe.13374",
-     pdf: "publications/GordonEC_CheungK_SavulescuJ_et_al_2025.pdf"
+     pdf: "publications/Gordon et al. (2025) moral enhancement.pdf"
     },
-     
-    {featured: true,
-     category: "Relational Morality",
+
+     {featured: false,
+     category: "Relational Moral Psychology",
       citation: `Calcott, R., & Earp, B. D. (2025). 
       Relational moral philosophy needs relational moral psychology: A relational moral theory: African ethics in and beyond the continent. 
       <em>Philosophical Psychology</em>, <em>38</em>(6), 2993-3001.`,
      url: "https://doi.org/10.1080/09515089.2024.2304054",
-     pdf: "publications/CalcottR_EarpBD_2025.pdf"
+     pdf: "publications/Calcott & Earp (2025) RN.pdf"
     },
 
-     {featured: true,
+   {featured: false,
      category: "Experimental Bioethics",
       citation: `Toomey, J., Lewis, J., Hannikainen, I. R., & Earp, B. D. (2024). 
       The true self and decision-making capacity. 
       <em>The American Journal of Bioethics</em>, <em>24</em>(8), 86–88.`,
      url: "https://doi.org/10.1080/15265161.2024.2361894",
-     pdf: "publications/ToomeyJ_LewisJ_HannikainenIR_et_al_2024.pdf"
-    }
+     pdf: "publications/Toomey et al. (2024) true self.pdf"
+    },
      
+     {featured: false,
+     category: "Psychology of Technology & AI",
+      citation: `Earp, B. D., Porsdam Mann, S., Liu, P., Hannikainen, I., Khan, M. A., Chu, Y., & Savulescu, J. (2024). 
+      Credit and blame for AI–generated content: Effects of personalization in four countries.
+      <em>Annals of the New York Academy of Sciences</em>, <em>1542</em>(1), 51–57.`,
+     url: "https://doi.org/10.1111/nyas.15258",
+     pdf: "publications/Earp et al. (2024) AI credit blame.pdf"
+    },
+
+     {featured: true,
+     category: "Relational Moral Psychology",
+      citation: `Earp, B. D., McLoughlin, K. L., Monrad, J. T., Clark, M. S., & Crockett, M. J. (2021). 
+      How social relationships shape moral wrongness judgments.
+      <em>Nature Communications</em>, <em>12</em>(1), 5776.`,
+     url: "https://doi.org/10.1038/s41467-021-26067-4",
+     pdf: "publications/Earp et al. (2021) RN.pdf"
+    }
+
+
   ],
 
   /* ---- News / updates -------------------------------------------------- */
