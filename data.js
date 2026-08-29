@@ -35,11 +35,11 @@ window.SITE_DATA = {
   /* ---- Home: five research themes -------------------------------------- */
   /* icon options: balance · chip · relations · brain · spark · book        */
   themes: [
-    { icon: "balance",   label: "Experimental bioethics" },
-    { icon: "chip",      label: "AI ethics" },
-    { icon: "relations", label: "Relational moral psychology" },
+    { icon: "balance",   label: "Experimental Bioethics" },
     { icon: "brain",     label: "Neuroethics" },
-    { icon: "spark",     label: "Psychology of technology" },
+    { icon: "relations", label: "Relational Moral Psychology" },
+    { icon: "chip",      label: "AI Ethics" },
+    { icon: "spark",     label: "Psychology of Technology & AI" },
   ],
 
   /* ---- People ---------------------------------------------------------- */
