@@ -314,7 +314,7 @@ document.getElementById('allPubs').innerHTML = PUB_CATEGORIES.map(category => {
       ${categoryPubs.map(p => `
         <div class="apa-item">
           ${p.pdf ? `<a class="doi" href="${esc(p.pdf)}" target="_blank" rel="noopener">[pdf]</a>` : ''}
-          ${p.citation}
+          ${p.featured ? `<strong>${p.citation}</strong>` : p.citation}
           ${p.url ? `<br><a class="doi" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.url)}</a>` : ''}
         </div>
       `).join('')}
