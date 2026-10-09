@@ -424,6 +424,202 @@ window.SITE_DATA = {
   /* ---- News / updates -------------------------------------------------- */
   /* Newest first. "body" supports basic HTML and shows on the detail page. */
   news: [
+
+
+{id: "moral-psychology-ai-workshop-2026",
+  date: "2026-11-05",
+  title: "Moral Psychology and Artificial Intelligence Workshop 2026",
+  summary: "A one-day workshop exploring moral judgment and action, framing and context, moral norms in human–AI relationships, and AI in moral decision-making and responsibility.",
+
+  body: `
+    <p><strong>Thursday, 5 November 2026</strong><br>8:30 AM – 5:30 PM</p>
+    <p>This workshop brings together researchers working at the
+      intersection of moral psychology, philosophy, and artificial
+      intelligence. The programme features two keynote presentations
+      and four thematic clusters examining moral judgment, moral
+      agency, human–AI relationships, and the ethical and psychological
+      implications of artificial intelligence.
+    </p>
+
+    <h2>Workshop Programme</h2>
+
+    <table class="workshop-programme">
+      <tbody>
+
+        <tr>
+          <td class="workshop-time">08:30–09:00</td>
+          <td>Registration &amp; coffee</td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">09:00–09:05</td>
+          <td>
+            <strong>Dr Brian D. Earp</strong><br>
+            Opening remarks
+          </td>
+        </tr>
+
+        <tr class="workshop-section">
+          <td colspan="2">
+            Opening Keynote
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">09:05–09:50</td>
+          <td>
+            <strong>Dr Ding Xiaojun</strong><br>
+            <em>Who may speak for the incapacitated patient? Digital twins and the legitimacy of surrogate medical decision-making</em>
+          </td>
+        </tr>
+
+        <tr class="workshop-section">
+          <td colspan="2">
+            Cluster 1: Understanding Moral Judgment and Action
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">09:50–10:20</td>
+          <td>
+            <strong>Dr Jiang Tonglin</strong><br>
+            <em>Awe and moral agency: From prosociality to moral courage</em>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">10:20–10:50</td>
+          <td>
+            <strong>Dr Kathryn Francis</strong><br>
+            <em>Rethinking the measurement of morality: Simulation, interaction, and emerging technologies</em>
+          </td>
+        </tr>
+
+        <tr class="workshop-break">
+          <td class="workshop-time">10:50–11:00</td>
+          <td>Break</td>
+        </tr>
+
+        <tr class="workshop-section">
+          <td colspan="2">
+            Cluster 2: Framing and Context in Moral Judgment
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">11:00–11:30</td>
+          <td>
+            <strong>Dr Takamatsu Reina</strong><br>
+            <em>Decision framing and social categories in moral judgments</em>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">11:30–12:00</td>
+          <td>
+            <strong>Faisal Feroz</strong><br>
+            <em>Can AI debias the news? LLM reframing improves cross-partisan receptivity, though the models overestimate their own effectiveness</em>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">12:00–12:30</td>
+          <td>
+            <strong>Dr Zhang Yan</strong><br>
+            <em>Perceived fairness: A framework for understanding public acceptance of AI-generated deepfakes</em>
+          </td>
+        </tr>
+
+        <tr class="workshop-break">
+          <td class="workshop-time">12:30–14:00</td>
+          <td>Lunch provided</td>
+        </tr>
+
+        <tr class="workshop-section">
+          <td colspan="2">
+            Cluster 3: Moral Norms in Human–AI Relationships
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">14:00–14:30</td>
+          <td>
+            <strong>Prof Ota Koji &amp; Dr Sato Kodai</strong><br>
+            <em>Moral foundations of judgments about the anthropomorphism of AI</em>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">14:30–15:00</td>
+          <td>
+            <strong>Dr Madeline G. Reinecke</strong><br>
+            <em>People want human and AI social partners to follow different relational norms despite similar roles</em>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">15:00–15:30</td>
+          <td>
+            <strong>Dr Zhang Renwen</strong><br>
+            <em>Who decides when AI crosses the line? Situated moral judgment in human–AI relationships</em>
+          </td>
+        </tr>
+
+        <tr class="workshop-break">
+          <td class="workshop-time">15:30–15:40</td>
+          <td>Break</td>
+        </tr>
+
+        <tr class="workshop-section">
+          <td colspan="2">
+            Cluster 4: AI in Moral Decision-Making and Responsibility
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">15:40–16:10</td>
+          <td>
+            <strong>Prof Liu Peng</strong><br>
+            <em>Machine-mediated morality: A psychological perspective</em>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">16:10–16:40</td>
+          <td>
+            <strong>Prof Yam Kai Chi</strong><br>
+            <em>How do humans respond to AI wrongdoing?</em>
+          </td>
+        </tr>
+
+        <tr class="workshop-section">
+          <td colspan="2">
+            Closing Keynote
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">16:40–17:25</td>
+          <td>
+            <strong>Dr Jim Everett</strong><br>
+            <em>Artificial intelligence, human minds, and moral consequences</em>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="workshop-time">17:25–17:30</td>
+          <td>
+            <strong>Dr Brian D. Earp</strong><br>Closing remarks
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  `
+},
+
+     
     {id: "site-launch",
       title: "EARP Lab website launched",
       date: "2026-06-12",
