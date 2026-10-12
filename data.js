@@ -432,28 +432,28 @@ window.SITE_DATA = {
   summary: "A one-day workshop exploring moral judgment and action, framing and context, moral norms in human–AI relationships, and AI in moral decision-making and responsibility.",
 
   body: `
-    <p><strong>Thursday, 5 November 2026</strong>8:30 AM – 5:30 PM</p>
+    <p><strong>Thursday, 5 November 2026</strong> 8:30 AM – 5:30 PM</p>
     <p><strong>Shaw Foundation Alumni House</strong> 11 Kent Ridge Drive, #01-02, Singapore 119244<p>
-    
+    <hr>
     <p>This workshop brings together researchers working at the intersection of moral psychology, philosophy, and artificial
       intelligence. The programme features two keynote presentations and four thematic clusters examining moral judgment, moral
       agency, human–AI relationships, and the ethical and psychological implications of artificial intelligence.</p>
-
     </p> Attendance is free, but space is limited. If you would like to attend, please register through [link to be added].</p>
-
+    <hr>
+    
     <style>
     .workshop-programme {width: 100%; min-width: 1050px; table-layout: auto; }
     .workshop-programme td:first-child:not([colspan]) {white-space: nowrap; width: 115px; min-width: 115px; }
     .workshop-programme td:nth-child(2) {min-width: 900px; }
     </style>
 
-    <h2>Workshop Programme</h2>
+    <h1>Workshop Programme</h1>
 
     <table class="workshop-programme">
       <tbody>
 
         <tr><td class="workshop-time">08:30–09:00</td><td>Registration &amp; coffee</td></tr>
-        <tr><td class="workshop-time">09:00–09:05</td><td><strong>Dr Brian D. Earp</strong><br>Opening remarks</td></tr>
+        <tr><td class="workshop-time">09:00–09:05</td><td>Dr Brian D. EARP<br>Opening remarks</td></tr>
 
         <tr class="workshop-section"><td colspan="2"><strong>Opening Keynote</strong></td></tr>
         <tr>
@@ -468,7 +468,7 @@ window.SITE_DATA = {
         </tr>
         <tr>
           <td class="workshop-time">10:20–10:50</td>
-          <td>>Dr Kathryn FRANCIS<br><em>Rethinking the measurement of morality: Simulation, interaction, and emerging technologies</em></td>
+          <td>Dr Kathryn FRANCIS<br><em>Rethinking the measurement of morality: Simulation, interaction, and emerging technologies</em></td>
         </tr>
 
         <tr class="workshop-break"><td class="workshop-time">10:50–11:00</td><td>Break</td></tr>
@@ -521,7 +521,7 @@ window.SITE_DATA = {
           <td>Dr Jim EVERETT<br><em>Artificial intelligence, human minds, and moral consequences</em></td>
         </tr>
 
-        <tr><td class="workshop-time">17:25–17:30</td><td><strong>Dr Brian D. Earp</strong><br>Closing remarks</td></tr>
+        <tr><td class="workshop-time">17:25–17:30</td><td>Dr Brian D. EARP<br>Closing remarks</td></tr>
 
       </tbody>
     </table>
