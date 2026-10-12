@@ -432,10 +432,14 @@ window.SITE_DATA = {
   summary: "A one-day workshop exploring moral judgment and action, framing and context, moral norms in human–AI relationships, and AI in moral decision-making and responsibility.",
 
   body: `
-    <p><strong>Thursday, 5 November 2026</strong><br>8:30 AM – 5:30 PM</p>
+    <p><strong>Thursday, 5 November 2026</strong>8:30 AM – 5:30 PM</p>
+    <p><strong>Shaw Foundation Alumni House</strong> 11 Kent Ridge Drive, #01-02, Singapore 119244<p>
+    
     <p>This workshop brings together researchers working at the intersection of moral psychology, philosophy, and artificial
       intelligence. The programme features two keynote presentations and four thematic clusters examining moral judgment, moral
       agency, human–AI relationships, and the ethical and psychological implications of artificial intelligence.
+
+      Attendance is free, but space is limited. If you would like to attend, please register through [link to be added].
     </p>
 
     <style>
