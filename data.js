@@ -440,7 +440,7 @@ window.SITE_DATA = {
     <p>This workshop brings together researchers working at the intersection of moral psychology, philosophy, and artificial
       intelligence. The programme features two keynote presentations and four thematic clusters examining moral judgment, moral
       agency, human–AI relationships, and the ethical and psychological implications of artificial intelligence.</p>
-    </p> Attendance is free, but space is limited. If you would like to attend, please register through [link to be added].</p>
+    </p> Registration for the event has now closed.</p>
     <hr>
     
     <style>
