@@ -176,8 +176,9 @@ window.SITE_DATA = {
           website: "https://liu-yuxin-psych.github.io/",
           email: "",
           image: "assets/headshots/YuxinL.avif",
-          bio: `Yuxin joined the Centre for Biomedical Ethics as a Research Fellow and Lab Manager for A/P Brian Earp’s EARP Lab in 2026. 
-          She holds, or will soon hold, a PhD, MScR, and MA in Psychology from the University of Edinburgh. Her doctoral research examines the concept of AI moral enhancement, aiming to ground proposals for Artificial Moral Advisors in empirical evidence of how individuals are likely to respond to them. Her research interests include moral psychology, experimental philosophy/bioethics, machine (meta)ethics, and AI ethics.`
+          bio: `Liu Yuxin joined the Centre for Biomedical Ethics as a Research Fellow in 2026. She works with A/Prof Brian D Earp and Prof Julian Savulescu, and serves as Lab Manager for the Experimental Bioethics, AI, and Relational Moral Psychology (EARP) Lab.Her research sits at the intersection of psychology and experimental philosophy, with a particular focus on the moral psychology of AI. Her work examines how human moral psychology shapes judgements and evaluations of AI-generated content and AI systems, as well as how AI influences, and ought to influence, human moral judgement and decision-making.
+Prior to joining CBmE, Yuxin completed a fully funded PhD position at the Centre for Technomoral Futures, Edinburgh Futures Institute, and the School of Philosophy, Psychology and Language Sciences (PPLS), University of Edinburgh. Her doctoral research on AI moral enhancement, supervised by Dr Adam Moore and Prof Shannon Vallor, focused on the psychological and ethical complexities of using artificial moral advisors to enhance human moral capacities and decision-making.
+She also holds an MA in Psychology and an MScR in Psychology from the University of Edinburgh.`
         },
          
         {name: "Lydia Tsiakiri",
